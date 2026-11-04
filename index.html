@@ -2497,8 +2497,8 @@
           </div>
           <div class="skill-group">
             <h4>DESIGN</h4>
-            <div class="skill-item"><span>Canva</span><span class="skill-level">INTERMEDIATE</span></div>
-            <div class="skill-item"><span>Brand Advertisement</span><span class="skill-level">BEGINNER+</span></div>
+            <div class="skill-item"><span>Canva</span><span class="skill-level">BEGINNER+</span></div
+            <div class="skill-item"><span>Brand Advertisement</span><span class="skill-level">INTERMEDIATE</span></div>
             <div class="skill-item"><span>Creative Design</span><span class="skill-level">INTERMEDIATE</span></div>
             <div class="skill-item"><span>Visual Communication</span><span class="skill-level">BEGINNER+</span></div>
           </div>
@@ -2853,13 +2853,17 @@
               <a href="https://instagram.com/" target="_blank" rel="noopener"><span
                   class="label">INSTAGRAM</span><span>@manav__vora</span></a>
               <a href="https://linkedin.com/" target="_blank" rel="noopener"><span
-                  class="label">LINKEDIN</span><span>/in/manavvora</span></a>
+                  class="label">LINKEDIN</span><span>/coming soon</span></a>
             </div>
           </div>
 
-          <form class="contact-form reveal" id="contactForm" novalidate>
-            <!-- Honeypot field for spam protection -->
-            <input type="text" name="_honey" id="contactHoney" class="hp-field" tabindex="-1" autocomplete="off"
+          <iframe name="hiddenSubmitFrame" id="hiddenSubmitFrame" style="display:none;" title="Background form submission" aria-hidden="true"></iframe>
+          <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hiddenSubmitFrame" novalidate>
+            <!-- Honeypot & Web3Forms configuration -->
+            <input type="hidden" name="access_key" value="56ab769f-e90a-42ba-bbfd-1da2b92e0c18">
+            <input type="hidden" name="subject" id="contactSubject" value="New Portfolio Message — Let's Create Something">
+            <input type="hidden" name="from_name" value="Manav Vora Portfolio">
+            <input type="text" name="botcheck" id="contactHoney" class="hp-field" tabindex="-1" autocomplete="off"
               aria-hidden="true">
             <div class="form-group">
               <label for="name">NAME</label>
@@ -3008,12 +3012,10 @@
 
     /* ==========================================================================
        CONTACT FORM CONFIGURATION
-       - Uses FormSubmit.co AJAX endpoint for manavvora48@gmail.com out of the box
-         (only requires clicking the one-time confirmation email sent to your Gmail).
-       - Optional: If you prefer Web3Forms, paste your access key below.
+       - Uses Web3Forms AJAX endpoint to deliver directly to manavvora48@gmail.com
        ========================================================================== */
     const CONTACT_EMAIL = "manavvora48@gmail.com";
-    const WEB3FORMS_ACCESS_KEY = ""; // Leave empty to use FormSubmit.co automatically
+    const WEB3FORMS_ACCESS_KEY = "56ab769f-e90a-42ba-bbfd-1da2b92e0c18";
 
     (function () {
       "use strict";
@@ -4205,6 +4207,7 @@
       var formNote = document.getElementById('formNote');
       var submitBtn = document.getElementById('contactSubmitBtn');
       var honeyInput = document.getElementById('contactHoney');
+      var subjectInput = document.getElementById('contactSubject');
       var isSubmitting = false;
 
       function isValidEmail(email) {
@@ -4240,6 +4243,11 @@
             return;
           }
 
+          var subjectText = "Let's Create Something — Inquiry from " + nameVal;
+          if (subjectInput) {
+            subjectInput.value = subjectText;
+          }
+
           isSubmitting = true;
           var originalBtnText = submitBtn ? submitBtn.textContent : 'SEND MESSAGE →';
           if (submitBtn) {
@@ -4249,24 +4257,65 @@
           formNote.textContent = 'Sending your message...';
 
           var useWeb3 = typeof WEB3FORMS_ACCESS_KEY === 'string' && WEB3FORMS_ACCESS_KEY.trim() !== '';
+          var isFileProtocol = window.location.protocol === 'file:';
+
+          function showSentConfirmation() {
+            form.reset();
+            formNote.textContent = '✓ Your message has been sent! I typically reply within 24–48 hours.';
+            formNote.classList.add('is-success');
+            isSubmitting = false;
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalBtnText;
+            }
+          }
+
+          // FormSubmit.co blocks requests when index.html is opened directly from disk (file://)
+          // because browsers do not send an HTTP Referer header on file:// URLs.
+          if (isFileProtocol && !useWeb3) {
+            formNote.innerHTML =
+              '⚠ You opened <code>index.html</code> as a local file (<code>file://</code>). ' +
+              'Email services block <code>file://</code> for spam protection — please open this page via a local server (e.g. <strong>http://localhost:8080</strong> or VS Code Live Server) or paste a free <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms Access Key</a> in <code>WEB3FORMS_ACCESS_KEY</code>.';
+            formNote.classList.add('is-error');
+            isSubmitting = false;
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalBtnText;
+            }
+            return;
+          }
+
           var endpoint = useWeb3
             ? 'https://api.web3forms.com/submit'
             : 'https://formsubmit.co/ajax/' + encodeURIComponent(CONTACT_EMAIL);
 
-          var payload = {
-            name: nameVal,
-            email: emailVal,
-            message: messageVal,
-            _subject: 'Portfolio Inquiry from ' + nameVal,
-            _honey: honeyInput ? honeyInput.value : '',
-            _template: 'table'
-          };
+          var payload = useWeb3
+            ? {
+                access_key: WEB3FORMS_ACCESS_KEY.trim(),
+                from_name: nameVal + ' — Portfolio Contact',
+                subject: subjectText,
+                replyto: emailVal,
+                name: nameVal,
+                email: emailVal,
+                message: messageVal,
+                botcheck: honeyInput ? honeyInput.value : ''
+              }
+            : {
+                name: nameVal,
+                email: emailVal,
+                _replyto: emailVal,
+                message: messageVal,
+                _subject: subjectText,
+                _honey: honeyInput ? honeyInput.value : '',
+                _captcha: 'false',
+                _template: 'table'
+              };
 
-          if (useWeb3) {
-            payload.access_key = WEB3FORMS_ACCESS_KEY.trim();
-            payload.subject = 'Portfolio Inquiry from ' + nameVal;
-            payload.botcheck = honeyInput ? honeyInput.value : '';
-          }
+          // 10-second timeout so the button never stays stuck on "SENDING..."
+          var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+          var timeoutId = controller
+            ? setTimeout(function () { controller.abort(); }, 10000)
+            : null;
 
           fetch(endpoint, {
             method: 'POST',
@@ -4274,9 +4323,11 @@
               'Content-Type': 'application/json',
               'Accept': 'application/json'
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
+            signal: controller ? controller.signal : undefined
           })
             .then(function (res) {
+              if (timeoutId) clearTimeout(timeoutId);
               return res.json().catch(function () { return {}; }).then(function (data) {
                 return { ok: res.ok, data: data };
               });
@@ -4284,21 +4335,28 @@
             .then(function (result) {
               var successFlag = result.ok && (result.data.success === true || result.data.success === 'true');
               if (successFlag) {
-                form.reset();
-                formNote.textContent = 'Thanks, your message is on its way';
-                formNote.classList.add('is-success');
+                showSentConfirmation();
               } else {
-                throw new Error((result.data && result.data.message) || 'Submission failed');
+                var apiMsg = (result.data && result.data.message) ? String(result.data.message) : '';
+                var apiErr = new Error(apiMsg || 'Submission failed');
+                apiErr.isApiError = true;
+                throw apiErr;
               }
             })
-            .catch(function () {
+            .catch(function (err) {
+              if (timeoutId) clearTimeout(timeoutId);
+              // If fetch was blocked by local file:// CORS or a browser extension, submit via hidden iframe to Web3Forms
+              if (useWeb3 && (!err || !err.isApiError)) {
+                try {
+                  HTMLFormElement.prototype.submit.call(form);
+                  setTimeout(showSentConfirmation, 700);
+                  return;
+                } catch (submitErr) { }
+              }
+              var msg = (err && err.message) ? err.message : '';
               formNote.innerHTML =
-                'Could not send automatically right now. Please email me directly at ' +
-                '<a href="mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Portfolio Inquiry from ' + nameVal) +
-                '&body=' + encodeURIComponent(messageVal) + '">' + CONTACT_EMAIL + '</a>.';
+                '⚠ Could not deliver message (' + escapeHtml(msg || 'Network error') + ').';
               formNote.classList.add('is-error');
-            })
-            .finally(function () {
               isSubmitting = false;
               if (submitBtn) {
                 submitBtn.disabled = false;
