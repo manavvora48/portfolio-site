@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============ SECURITY HEADERS & POLICIES ============ -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+  <title>Privacy Policy — Manav Vora</title>
+  <meta name="description" content="Privacy Policy for Manav Vora's Creative Technology & Design Portfolio.">
+  <meta name="google-site-verification" content="dCgVG0yZB4Vv72oTtHiP6qItqtgw-I7OLcfPtsfFQmU" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070908;
+      --bg-2: #0D110E;
+      --card: #111612;
+      --border: #202820;
+      --border-soft: #171D18;
+      --text: #F1F4EF;
+      --text-soft: #9AA39B;
+      --text-faint: #5E675F;
+      --accent: #A6D9AE;
+      --accent-strong: #70B97A;
+      --accent-dim: rgba(166, 217, 174, 0.12);
+      --font-display: 'Manrope', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --container: 960px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(7, 9, 8, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    nav {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .logo:hover {
+      text-decoration: none;
+    }
+
+    .policy-tabs {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      flex-wrap: wrap;
+    }
+
+    .policy-tabs a {
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: color 0.2s var(--ease);
+    }
+
+    .policy-tabs a:hover,
+    .policy-tabs a.active {
+      color: var(--accent);
+    }
+
+    .btn-ghost {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 16px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent-strong);
+      background: var(--accent-dim);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 72px 40px 100px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 48px 24px 80px;
+      }
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-strong);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .meta-bar {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-faint);
+      letter-spacing: 0.06em;
+      padding-bottom: 36px;
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .meta-bar span strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .policy-card {
+        padding: 24px 20px;
+      }
+    }
+
+    .policy-card .sec-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .policy-card h2 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-card p {
+      color: var(--text-soft);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-card ul {
+      margin: 12px 0 4px 20px;
+      color: var(--text-soft);
+      font-size: 14.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .policy-card code {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--accent);
+      background: var(--bg-2);
+      border: 1px solid var(--border-soft);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12.5px;
+      color: var(--text-faint);
+    }
+
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-legal a,
+    .footer-legal button {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-soft);
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .footer-legal a:hover,
+    .footer-legal button:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .cookie-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .cookie-status-pill .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-faint);
+    }
+
+    .cookie-status-pill.is-consented .status-dot {
+      background: var(--accent-strong);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    /* Cookie Banner & Modal */
+    .cookie-banner {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      z-index: 9500;
+      background: rgba(13, 17, 14, 0.95);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-strong);
+      border-radius: 10px;
+      padding: 22px 26px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .cookie-banner.visible {
+      display: flex;
+    }
+
+    @media (max-width: 820px) {
+      .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .cookie-banner-copy h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .cookie-banner-copy p {
+      font-size: 13.5px;
+      color: var(--text-soft);
+    }
+
+    .cookie-banner-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 10px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      color: var(--text-soft);
+    }
+
+    .cookie-btn:hover {
+      border-color: var(--accent-strong);
+      color: var(--text);
+    }
+
+    .cookie-btn.primary {
+      background: var(--accent);
+      color: #070908;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Legal navigation">
+      <a href="index.html" class="logo">MANAV.</a>
+      <div class="policy-tabs">
+        <a href="privacy-policy.html" class="active" aria-current="page">PRIVACY POLICY</a>
+        <a href="terms-and-conditions.html">TERMS &amp; CONDITIONS</a>
+        <a href="cookie-policy.html">COOKIE POLICY</a>
+      </div>
+      <a href="index.html" class="btn-ghost">← BACK TO PORTFOLIO</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow"><span class="dot"></span>LEGAL // DATA PROTECTION</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta-bar">
+      <span>EFFECTIVE DATE: <strong>NOVEMBER 5, 2026</strong></span>
+      <span>CONTROLLER: <strong>MANAV VORA (MUMBAI, INDIA)</strong></span>
+      <span>COMPLIANCE: <strong>INDIA DPDP ACT &amp; GDPR</strong></span>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">01 // OVERVIEW</div>
+      <h2>Commitment to Privacy</h2>
+      <p>
+        Welcome to the portfolio website of Manav Vora ("we", "our", or "us"). We respect your privacy and are committed to protecting any personal information you share when exploring this website or reaching out via our contact form.
+      </p>
+      <p>
+        This Privacy Policy explains what information is collected, how it is processed and secured, and how you can exercise your data privacy rights.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">02 // INFORMATION WE COLLECT</div>
+      <h2>Information You Voluntarily Provide</h2>
+      <p>We do not require account registration or collect personal data passively while you browse projects or play the interactive isometric experience. We only collect personal data when you voluntarily submit the <strong>Contact Form</strong>:</p>
+      <ul>
+        <li><strong>Full Name or Alias:</strong> Used to address you when replying to your inquiry.</li>
+        <li><strong>Email Address:</strong> Used strictly to respond to your message.</li>
+        <li><strong>Message Content:</strong> Any project details, questions, or feedback you choose to write.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">03 // AUTOMATED &amp; SECURITY DATA</div>
+      <h2>Browser Storage &amp; Anti-Spam Protection</h2>
+      <p>To keep this website secure against automated bot abuse, Cross-Site Scripting (XSS), and denial-of-service spam, your browser processes limited local security state:</p>
+      <ul>
+        <li><strong>Rate-Limiting Timestamps (<code>mv_contact_ts</code>):</strong> Stored in temporary <code>sessionStorage</code> to enforce a 60-second cooldown and prevent form-flooding attacks.</li>
+        <li><strong>Cookie Consent Record (<code>mv_cookie_consent_v1</code>):</strong> Stored in <code>localStorage</code> and a first-party cookie (<code>mv_cookie_consent</code>) for 180 days to remember your privacy preferences.</li>
+        <li><strong>Optional Functional Preferences:</strong> Only stored if you explicitly grant consent to Functional storage in the Cookie Banner or <a href="cookie-policy.html">Cookie Policy</a> settings.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">04 // THIRD-PARTY PROCESSORS</div>
+      <h2>How Your Contact Messages Are Delivered</h2>
+      <p>When you submit the Contact Form, your message is transmitted over encrypted HTTPS to our form delivery processor:</p>
+      <ul>
+        <li><strong>Web3Forms / FormSubmit:</strong> Processes the form payload solely to forward the email directly to <code>manavvora48@gmail.com</code>. We do not sell, rent, or share your email address with advertisers or marketing lists.</li>
+        <li><strong>Google Fonts:</strong> Typography assets (<code>Manrope</code> and <code>DM Mono</code>) are loaded from Google Fonts CDN using privacy-preserving referrer policies (<code>strict-origin-when-cross-origin</code>).</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">05 // DATA SECURITY MEASURES</div>
+      <h2>How We Protect Your Information</h2>
+      <p>This website implements defense-in-depth security controls, including:</p>
+      <ul>
+        <li>Strict <strong>Content Security Policy (CSP)</strong> and <strong>HTTP Strict Transport Security (HSTS)</strong> headers.</li>
+        <li>Input length restrictions, email header injection stripping, and HTML tag sanitization on all form fields.</li>
+        <li>Clickjacking frame-breakers (<code>X-Frame-Options: DENY</code>) and sandboxed form frames.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">06 // YOUR PRIVACY RIGHTS &amp; CONTACT</div>
+      <h2>Access, Deletion &amp; Consent Withdrawal</h2>
+      <p>Under India's Digital Personal Data Protection Act (DPDP Act, 2023) and the EU General Data Protection Regulation (GDPR), you have the right to:</p>
+      <ul>
+        <li>Request access to or deletion of any email correspondence you have sent to us.</li>
+        <li>Withdraw or modify your cookie/storage consent at any time via our <a href="cookie-policy.html">Cookie Policy</a> page.</li>
+      </ul>
+      <p style="margin-top:14px;">
+        <strong>Privacy Contact:</strong> Manav Vora — <a href="mailto:manavvora48@gmail.com">manavvora48@gmail.com</a> (Mumbai, Maharashtra, India).
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>Mumbai, India — © 2026 Manav Vora</div>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <span class="cookie-status-pill" id="cookieStatusPill">
+          <span class="status-dot"></span>
+          <span id="cookieStatusLabel">CONSENT: CHECKING</span>
+        </span>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <aside class="cookie-banner" id="cookieConsentBanner" role="region" aria-label="Cookie consent notice">
+    <div class="cookie-banner-copy">
+      <h4>Privacy &amp; Cookie Consent</h4>
+      <p>We use strictly necessary storage for security and optional preferences. Manage your choices anytime in our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" class="cookie-btn" id="cookieRejectBtn">NECESSARY ONLY</button>
+      <button type="button" class="cookie-btn primary" id="cookieAcceptAllBtn">ACCEPT ALL ✓</button>
+    </div>
+  </aside>
+
+  <script>
+    (function () {
+      "use strict";
+      try {
+        if (window.top !== window.self) window.top.location = window.self.location.href;
+      } catch (e) {
+        document.documentElement.style.display = 'none';
+      }
+
+      var KEY = 'mv_cookie_consent_v1';
+      var COOKIE = 'mv_cookie_consent';
+      var MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
+      var banner = document.getElementById('cookieConsentBanner');
+      var pill = document.getElementById('cookieStatusPill');
+      var label = document.getElementById('cookieStatusLabel');
+
+      function getConsent() {
+        try {
+          var raw = localStorage.getItem(KEY);
+          if (raw) {
+            var p = JSON.parse(raw);
+            if (p && p.version === 1 && p.essential === true && (Date.now() - p.timestamp < MAX_AGE_MS)) return p;
+          }
+        } catch (e) { }
+        return null;
+      }
+
+      function saveConsent(func, ana) {
+        var rec = { version: 1, essential: true, functional: Boolean(func), analytics: Boolean(ana), timestamp: Date.now() };
+        var str = JSON.stringify(rec);
+        try { localStorage.setItem(KEY, str); } catch (e) { }
+        try {
+          var sec = window.location.protocol === 'https:' ? '; Secure' : '';
+          document.cookie = COOKIE + '=' + encodeURIComponent(str) + '; max-age=' + (180 * 86400) + '; path=/; SameSite=Lax' + sec;
+        } catch (e) { }
+        renderState(rec);
+      }
+
+      function renderState(rec) {
+        if (!rec) {
+          if (pill) pill.classList.remove('is-consented');
+          if (label) label.textContent = 'CONSENT: PENDING';
+          if (banner) banner.classList.add('visible');
+        } else {
+          if (pill) pill.classList.add('is-consented');
+          if (label) label.textContent = (rec.functional && rec.analytics) ? 'CONSENT: ALL ACTIVE' : (!rec.functional && !rec.analytics ? 'CONSENT: NECESSARY ONLY' : 'CONSENT: CUSTOM');
+          if (banner) banner.classList.remove('visible');
+        }
+      }
+
+      renderState(getConsent());
+      var acc = document.getElementById('cookieAcceptAllBtn');
+      var rej = document.getElementById('cookieRejectBtn');
+      if (acc) acc.addEventListener('click', function () { saveConsent(true, true); });
+      if (rej) rej.addEventListener('click', function () { saveConsent(false, false); });
+    })();
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============ SECURITY HEADERS & POLICIES ============ -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+  <title>Cookie Policy &amp; Consent — Manav Vora</title>
+  <meta name="description" content="Cookie Policy and interactive Cookie Consent Preferences for Manav Vora's Portfolio.">
+  <meta name="google-site-verification" content="dCgVG0yZB4Vv72oTtHiP6qItqtgw-I7OLcfPtsfFQmU" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070908;
+      --bg-2: #0D110E;
+      --card: #111612;
+      --border: #202820;
+      --border-soft: #171D18;
+      --text: #F1F4EF;
+      --text-soft: #9AA39B;
+      --text-faint: #5E675F;
+      --accent: #A6D9AE;
+      --accent-strong: #70B97A;
+      --accent-dim: rgba(166, 217, 174, 0.12);
+      --font-display: 'Manrope', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --container: 960px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(7, 9, 8, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    nav {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .logo:hover {
+      text-decoration: none;
+    }
+
+    .policy-tabs {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      flex-wrap: wrap;
+    }
+
+    .policy-tabs a {
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: color 0.2s var(--ease);
+    }
+
+    .policy-tabs a:hover,
+    .policy-tabs a.active {
+      color: var(--accent);
+    }
+
+    .btn-ghost {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 16px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent-strong);
+      background: var(--accent-dim);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 72px 40px 100px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 48px 24px 80px;
+      }
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-strong);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .meta-bar {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-faint);
+      letter-spacing: 0.06em;
+      padding-bottom: 36px;
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .meta-bar span strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .policy-card {
+        padding: 24px 20px;
+      }
+    }
+
+    .policy-card .sec-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .policy-card h2 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-card p {
+      color: var(--text-soft);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card code {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      background: var(--bg-2);
+      border: 1px solid var(--border-soft);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Interactive Consent Control Panel on Cookie Policy Page */
+    .consent-control-panel {
+      background: var(--bg-2);
+      border: 1px solid var(--accent-strong);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .consent-status-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .consent-live-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(166, 217, 174, 0.35);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    .pref-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .pref-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .pref-row h4 {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .pref-row p {
+      font-size: 13px;
+      color: var(--text-soft);
+      margin: 0;
+    }
+
+    .cookie-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .cookie-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .cookie-slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #1B221D;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      transition: 0.2s var(--ease);
+    }
+
+    .cookie-slider::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background: var(--text-soft);
+      border-radius: 50%;
+      transition: 0.2s var(--ease);
+    }
+
+    .cookie-switch input:checked + .cookie-slider {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+    }
+
+    .cookie-switch input:checked + .cookie-slider::before {
+      transform: translateX(20px);
+      background: var(--accent);
+    }
+
+    .cookie-switch input:disabled + .cookie-slider {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .panel-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .cookie-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 11px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text-soft);
+      transition: all 0.2s var(--ease);
+    }
+
+    .cookie-btn:hover {
+      border-color: var(--accent-strong);
+      color: var(--text);
+    }
+
+    .cookie-btn.primary {
+      background: var(--accent);
+      color: #070908;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Cookie Audit Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      background: var(--bg-2);
+    }
+
+    td {
+      color: var(--text-soft);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12.5px;
+      color: var(--text-faint);
+    }
+
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-soft);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Legal navigation">
+      <a href="index.html" class="logo">MANAV.</a>
+      <div class="policy-tabs">
+        <a href="privacy-policy.html">PRIVACY POLICY</a>
+        <a href="terms-and-conditions.html">TERMS &amp; CONDITIONS</a>
+        <a href="cookie-policy.html" class="active" aria-current="page">COOKIE POLICY</a>
+      </div>
+      <a href="index.html" class="btn-ghost">← BACK TO PORTFOLIO</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow"><span class="dot"></span>LEGAL // COOKIES &amp; BROWSER STORAGE</div>
+    <h1>Cookie Policy &amp; Consent Check</h1>
+    <div class="meta-bar">
+      <span>EFFECTIVE DATE: <strong>NOVEMBER 5, 2026</strong></span>
+      <span>CONSENT DURATION: <strong>180 DAYS</strong></span>
+      <span>THIRD-PARTY AD TRACKERS: <strong>NONE (0)</strong></span>
+    </div>
+
+    <!-- Live Interactive Cookie Consent Manager -->
+    <section class="consent-control-panel" aria-labelledby="liveConsentHeading">
+      <div class="consent-status-header">
+        <div>
+          <div class="eyebrow" style="margin-bottom:4px;"><span class="dot"></span>LIVE CONSENT VERIFICATION</div>
+          <h2 id="liveConsentHeading" style="font-size:20px;">Your Current Cookie Consent Status</h2>
+        </div>
+        <span class="consent-live-badge" id="liveConsentBadge">CHECKING CONSENT...</span>
+      </div>
+
+      <p id="liveConsentTimestamp" style="font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);margin-bottom:16px;">
+        Verifying browser storage record...
+      </p>
+
+      <div class="pref-row">
+        <div>
+          <h4>Strictly Necessary &amp; Security Storage (Always Active)</h4>
+          <p>Protects the contact form against automated spam floods and stores your consent choice.</p>
+        </div>
+        <label class="cookie-switch" aria-label="Strictly Necessary Storage (Always Active)">
+          <input type="checkbox" checked disabled>
+          <span class="cookie-slider"></span>
+        </label>
+      </div>
+
+      <div class="pref-row">
+        <div>
+          <h4>Functional &amp; Interactive Preferences</h4>
+          <p>Saves your Monument puzzle progress and audio synthesizer mute/unmute state.</p>
+        </div>
+        <label class="cookie-switch" for="pageFuncToggle">
+          <input type="checkbox" id="pageFuncToggle">
+          <span class="cookie-slider"></span>
+        </label>
+      </div>
+
+      <div class="pref-row">
+        <div>
+          <h4>Anonymous Performance &amp; Analytics</h4>
+          <p>Allows anonymous performance metrics to optimize 3D canvas frame rates.</p>
+        </div>
+        <label class="cookie-switch" for="pageAnaToggle">
+          <input type="checkbox" id="pageAnaToggle">
+          <span class="cookie-slider"></span>
+        </label>
+      </div>
+
+      <div class="panel-actions">
+        <button type="button" class="cookie-btn primary" id="pageAcceptAllBtn">ACCEPT ALL ✓</button>
+        <button type="button" class="cookie-btn" id="pageSaveCustomBtn">SAVE SELECTED PREFERENCES</button>
+        <button type="button" class="cookie-btn" id="pageRejectBtn">NECESSARY ONLY (REJECT OPTIONAL)</button>
+      </div>
+    </section>
+
+    <div class="policy-card">
+      <div class="sec-num">01 // WHAT ARE COOKIES &amp; LOCAL STORAGE?</div>
+      <h2>How This Website Uses Browser Storage</h2>
+      <p>
+        Cookies are small text files placed on your device by websites you visit. Alongside cookies, modern web applications use browser <code>localStorage</code> and <code>sessionStorage</code> to keep interactive features working smoothly without sending unnecessary data across the network.
+      </p>
+      <p>
+        <strong>Zero Advertising Trackers:</strong> This portfolio does <em>not</em> use any third-party advertising pixels, cross-site tracking cookies, or behavioral profiling scripts.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">02 // STORAGE &amp; COOKIE INVENTORY</div>
+      <h2>Complete List of Cookies &amp; Storage Keys</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name / Key</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Duration</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>mv_cookie_consent</code></td>
+              <td>First-Party Cookie (<code>SameSite=Lax</code>)</td>
+              <td>Strictly Necessary</td>
+              <td>180 Days</td>
+              <td>Stores your verified cookie consent choices.</td>
+            </tr>
+            <tr>
+              <td><code>mv_cookie_consent_v1</code></td>
+              <td><code>localStorage</code></td>
+              <td>Strictly Necessary</td>
+              <td>180 Days</td>
+              <td>Mirrors your cookie consent preferences for fast client-side verification.</td>
+            </tr>
+            <tr>
+              <td><code>mv_contact_ts</code></td>
+              <td><code>sessionStorage</code></td>
+              <td>Strictly Necessary (Security)</td>
+              <td>Session (1 Hour window)</td>
+              <td>Enforces rate-limiting on the Contact Form (max 1 message per 60s, 5 per hour) to block spam bots.</td>
+            </tr>
+            <tr>
+              <td><code>mv_functional_prefs</code></td>
+              <td><code>localStorage</code></td>
+              <td>Functional (Optional)</td>
+              <td>Persistent (Deleted on opt-out)</td>
+              <td>Remembers optional interactive preferences if Functional consent is enabled.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">03 // MANAGING OR DELETING COOKIES</div>
+      <h2>How to Withdraw Consent</h2>
+      <p>
+        You can change or withdraw your consent at any time using the interactive control panel at the top of this page, or by clicking <strong>Cookie Settings</strong> in the footer of the main portfolio page.When you switch to "Necessary Only", any optional functional or analytics storage keys are immediately purged from your browser.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>Mumbai, India — © 2026 Manav Vora</div>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+      try {
+        if (window.top !== window.self) window.top.location = window.self.location.href;
+      } catch (e) {
+        document.documentElement.style.display = 'none';
+      }
+
+      var KEY = 'mv_cookie_consent_v1';
+      var COOKIE = 'mv_cookie_consent';
+      var MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
+
+      var badge = document.getElementById('liveConsentBadge');
+      var tsLine = document.getElementById('liveConsentTimestamp');
+      var funcToggle = document.getElementById('pageFuncToggle');
+      var anaToggle = document.getElementById('pageAnaToggle');
+      var acceptAllBtn = document.getElementById('pageAcceptAllBtn');
+      var saveCustomBtn = document.getElementById('pageSaveCustomBtn');
+      var rejectBtn = document.getElementById('pageRejectBtn');
+
+      function getConsent() {
+        try {
+          var raw = localStorage.getItem(KEY);
+          if (raw) {
+            var p = JSON.parse(raw);
+            if (p && p.version === 1 && p.essential === true && (Date.now() - p.timestamp < MAX_AGE_MS)) {
+              return p;
+            }
+          }
+        } catch (e) { }
+        return null;
+      }
+
+      function saveConsent(func, ana) {
+        var rec = {
+          version: 1,
+          essential: true,
+          functional: Boolean(func),
+          analytics: Boolean(ana),
+          timestamp: Date.now()
+        };
+        var str = JSON.stringify(rec);
+        try { localStorage.setItem(KEY, str); } catch (e) { }
+        try {
+          var sec = window.location.protocol === 'https:' ? '; Secure' : '';
+          document.cookie = COOKIE + '=' + encodeURIComponent(str) + '; max-age=' + (180 * 86400) + '; path=/; SameSite=Lax' + sec;
+        } catch (e) { }
+        if (!rec.functional) {
+          try { localStorage.removeItem('mv_functional_prefs'); } catch (e) { }
+        }
+        if (!rec.analytics) {
+          try { localStorage.removeItem('mv_analytics_prefs'); } catch (e) { }
+        }
+        renderUI(rec);
+      }
+
+      function renderUI(rec) {
+        if (!rec) {
+          if (badge) badge.textContent = 'STATUS: NO CONSENT RECORDED YET';
+          if (tsLine) tsLine.textContent = 'You have not saved cookie preferences yet. Choose an option below to save your consent.';
+          if (funcToggle) funcToggle.checked = true;
+          if (anaToggle) anaToggle.checked = false;
+          return;
+        }
+
+        var mode = (rec.functional && rec.analytics)
+          ? 'ALL CATEGORIES ACCEPTED'
+          : (!rec.functional && !rec.analytics ? 'NECESSARY ONLY' : 'CUSTOM PREFERENCES');
+        if (badge) badge.textContent = 'STATUS: ' + mode;
+        var dt = new Date(rec.timestamp);
+        if (tsLine) {
+          tsLine.textContent = 'Last updated: ' + dt.toUTCString() + ' • Essential: Active | Functional: ' + (rec.functional ? 'Enabled' : 'Disabled') + ' | Analytics: ' + (rec.analytics ? 'Enabled' : 'Disabled');
+        }
+        if (funcToggle) funcToggle.checked = rec.functional;
+        if (anaToggle) anaToggle.checked = rec.analytics;
+      }
+
+      renderUI(getConsent());
+
+      if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', function () { saveConsent(true, true); });
+      }
+      if (saveCustomBtn) {
+        saveCustomBtn.addEventListener('click', function () {
+          saveConsent(funcToggle ? funcToggle.checked : false, anaToggle ? anaToggle.checked : false);
+        });
+      }
+      if (rejectBtn) {
+        rejectBtn.addEventListener('click', function () { saveConsent(false, false); });
+      }
+    })();
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+# Google Search Console & Web Crawler Configuration
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.*
+Allow: /.well-known/
+
+# Update https://your-domain.com with your live domain once deployed
+Sitemap: https://your-domain.com/sitemap.xml

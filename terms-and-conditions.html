@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============ SECURITY HEADERS & POLICIES ============ -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+  <title>Terms &amp; Conditions — Manav Vora</title>
+  <meta name="description" content="Terms and Conditions of Use for Manav Vora's Creative Technology & Design Portfolio.">
+  <meta name="google-site-verification" content="dCgVG0yZB4Vv72oTtHiP6qItqtgw-I7OLcfPtsfFQmU" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070908;
+      --bg-2: #0D110E;
+      --card: #111612;
+      --border: #202820;
+      --border-soft: #171D18;
+      --text: #F1F4EF;
+      --text-soft: #9AA39B;
+      --text-faint: #5E675F;
+      --accent: #A6D9AE;
+      --accent-strong: #70B97A;
+      --accent-dim: rgba(166, 217, 174, 0.12);
+      --font-display: 'Manrope', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --container: 960px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(7, 9, 8, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    nav {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .logo:hover {
+      text-decoration: none;
+    }
+
+    .policy-tabs {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      flex-wrap: wrap;
+    }
+
+    .policy-tabs a {
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: color 0.2s var(--ease);
+    }
+
+    .policy-tabs a:hover,
+    .policy-tabs a.active {
+      color: var(--accent);
+    }
+
+    .btn-ghost {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 16px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent-strong);
+      background: var(--accent-dim);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 72px 40px 100px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 48px 24px 80px;
+      }
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-strong);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .meta-bar {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-faint);
+      letter-spacing: 0.06em;
+      padding-bottom: 36px;
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .meta-bar span strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .policy-card {
+        padding: 24px 20px;
+      }
+    }
+
+    .policy-card .sec-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .policy-card h2 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-card p {
+      color: var(--text-soft);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-card ul {
+      margin: 12px 0 4px 20px;
+      color: var(--text-soft);
+      font-size: 14.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12.5px;
+      color: var(--text-faint);
+    }
+
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-legal a,
+    .footer-legal button {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-soft);
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .footer-legal a:hover,
+    .footer-legal button:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .cookie-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .cookie-status-pill .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-faint);
+    }
+
+    .cookie-status-pill.is-consented .status-dot {
+      background: var(--accent-strong);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .cookie-banner {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      z-index: 9500;
+      background: rgba(13, 17, 14, 0.95);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-strong);
+      border-radius: 10px;
+      padding: 22px 26px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .cookie-banner.visible {
+      display: flex;
+    }
+
+    @media (max-width: 820px) {
+      .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .cookie-banner-copy h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .cookie-banner-copy p {
+      font-size: 13.5px;
+      color: var(--text-soft);
+    }
+
+    .cookie-banner-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 10px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      color: var(--text-soft);
+    }
+
+    .cookie-btn:hover {
+      border-color: var(--accent-strong);
+      color: var(--text);
+    }
+
+    .cookie-btn.primary {
+      background: var(--accent);
+      color: #070908;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Legal navigation">
+      <a href="index.html" class="logo">MANAV.</a>
+      <div class="policy-tabs">
+        <a href="privacy-policy.html">PRIVACY POLICY</a>
+        <a href="terms-and-conditions.html" class="active" aria-current="page">TERMS &amp; CONDITIONS</a>
+        <a href="cookie-policy.html">COOKIE POLICY</a>
+      </div>
+      <a href="index.html" class="btn-ghost">← BACK TO PORTFOLIO</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow"><span class="dot"></span>LEGAL // TERMS OF USE</div>
+    <h1>Terms &amp; Conditions</h1>
+    <div class="meta-bar">
+      <span>LAST UPDATED: <strong>NOVEMBER 5, 2026</strong></span>
+      <span>OWNER: <strong>MANAV VORA</strong></span>
+      <span>JURISDICTION: <strong>MUMBAI, INDIA</strong></span>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">01 // ACCEPTANCE OF TERMS</div>
+      <h2>Agreement to Terms</h2>
+      <p>
+        By accessing and using this website (the portfolio of Manav Vora), you accept and agree to be bound by these Terms &amp; Conditions, our <a href="privacy-policy.html">Privacy Policy</a>, and our <a href="cookie-policy.html">Cookie Policy</a>. If you do not agree with any part of these terms, please discontinue use of the website immediately.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">02 // INTELLECTUAL PROPERTY RIGHTS</div>
+      <h2>Ownership of Creative Works &amp; Code</h2>
+      <p>
+        Unless otherwise stated, all content displayed on this website — including brand case studies (such as <em>VELORÉ</em>, <em>AUREVÉ</em>, and <em>VINCERO</em>), advertisement layouts, AI-generated product photography, commercial videos, dashboard designs, custom 3D canvas code, and the interactive isometric architectural game — is the intellectual property of <strong>Manav Vora</strong>.
+      </p>
+      <ul>
+        <li>You may view, interact with, and share links to this portfolio for personal, educational, or professional recruitment evaluation.</li>
+        <li>You may <strong>not</strong> reproduce, redistribute, watermark-strip, sell, or claim ownership of any visual assets, videos, or source code without prior written permission from Manav Vora.</li>
+        <li>Fictional brand names shown in case studies are conceptual portfolio explorations created for educational and creative demonstration.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">03 // ACCEPTABLE USE &amp; SECURITY RULES</div>
+      <h2>Prohibited Activities</h2>
+      <p>To maintain the integrity and security of this website, you agree not to engage in any of the following prohibited actions:</p>
+      <ul>
+        <li>Attempting to probe, scan, scrape, or test the vulnerability of the website or bypass its Content Security Policy (CSP) or rate-limiting protections.</li>
+        <li>Embedding this website inside unauthorized external <code>&lt;iframe&gt;</code> elements (clickjacking or UI redressing).</li>
+        <li>Using automated scripts, bots, or spam tools to flood the Contact Form or abuse the email delivery endpoint.</li>
+        <li>Injecting malicious payloads, Cross-Site Scripting (XSS) vectors, or forged headers into form submissions.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">04 // DISCLAIMERS &amp; LIMITATION OF LIABILITY</div>
+      <h2>"As-Is" Provision</h2>
+      <p>
+        This website and its interactive 3D/canvas experiences are provided on an "as-is" and "as-available" basis for portfolio demonstration purposes. While we take strong security measures to keep the site safe and accurate, we make no warranties regarding uninterrupted availability or compatibility with legacy browsers.
+      </p>
+      <p>
+        In no event shall Manav Vora be liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, this website or any external links referenced herein.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <div class="sec-num">05 // GOVERNING LAW &amp; CONTACT</div>
+      <h2>Jurisdiction &amp; Inquiries</h2>
+      <p>
+        These Terms &amp; Conditions are governed by and construed in accordance with the laws of India, with exclusive jurisdiction in the courts of Mumbai, Maharashtra.
+      </p>
+      <p>
+        For permissions, licensing inquiries, or questions regarding these terms, please contact: <a href="mailto:manavvora48@gmail.com">manavvora48@gmail.com</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>Mumbai, India — © 2026 Manav Vora</div>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <span class="cookie-status-pill" id="cookieStatusPill">
+          <span class="status-dot"></span>
+          <span id="cookieStatusLabel">CONSENT: CHECKING</span>
+        </span>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <aside class="cookie-banner" id="cookieConsentBanner" role="region" aria-label="Cookie consent notice">
+    <div class="cookie-banner-copy">
+      <h4>Privacy &amp; Cookie Consent</h4>
+      <p>We use strictly necessary storage for security and optional preferences. Manage your choices anytime in our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" class="cookie-btn" id="cookieRejectBtn">NECESSARY ONLY</button>
+      <button type="button" class="cookie-btn primary" id="cookieAcceptAllBtn">ACCEPT ALL ✓</button>
+    </div>
+  </aside>
+
+  <script>
+    (function () {
+      "use strict";
+      try {
+        if (window.top !== window.self) window.top.location = window.self.location.href;
+      } catch (e) {
+        document.documentElement.style.display = 'none';
+      }
+
+      var KEY = 'mv_cookie_consent_v1';
+      var COOKIE = 'mv_cookie_consent';
+      var MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
+      var banner = document.getElementById('cookieConsentBanner');
+      var pill = document.getElementById('cookieStatusPill');
+      var label = document.getElementById('cookieStatusLabel');
+
+      function getConsent() {
+        try {
+          var raw = localStorage.getItem(KEY);
+          if (raw) {
+            var p = JSON.parse(raw);
+            if (p && p.version === 1 && p.essential === true && (Date.now() - p.timestamp < MAX_AGE_MS)) return p;
+          }
+        } catch (e) { }
+        return null;
+      }
+
+      function saveConsent(func, ana) {
+        var rec = { version: 1, essential: true, functional: Boolean(func), analytics: Boolean(ana), timestamp: Date.now() };
+        var str = JSON.stringify(rec);
+        try { localStorage.setItem(KEY, str); } catch (e) { }
+        try {
+          var sec = window.location.protocol === 'https:' ? '; Secure' : '';
+          document.cookie = COOKIE + '=' + encodeURIComponent(str) + '; max-age=' + (180 * 86400) + '; path=/; SameSite=Lax' + sec;
+        } catch (e) { }
+        renderState(rec);
+      }
+
+      function renderState(rec) {
+        if (!rec) {
+          if (pill) pill.classList.remove('is-consented');
+          if (label) label.textContent = 'CONSENT: PENDING';
+          if (banner) banner.classList.add('visible');
+        } else {
+          if (pill) pill.classList.add('is-consented');
+          if (label) label.textContent = (rec.functional && rec.analytics) ? 'CONSENT: ALL ACTIVE' : (!rec.functional && !rec.analytics ? 'CONSENT: NECESSARY ONLY' : 'CONSENT: CUSTOM');
+          if (banner) banner.classList.remove('visible');
+        }
+      }
+
+      renderState(getConsent());
+      var acc = document.getElementById('cookieAcceptAllBtn');
+      var rej = document.getElementById('cookieRejectBtn');
+      if (acc) acc.addEventListener('click', function () { saveConsent(true, true); });
+      if (rej) rej.addEventListener('click', function () { saveConsent(false, false); });
+    })();
+  </script>
+</body>
+
+</html>
+
