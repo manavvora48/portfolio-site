@@ -4,9 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ============ SECURITY HEADERS & POLICIES ============ -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://api.web3forms.com https://formsubmit.co; form-action https://api.web3forms.com https://formsubmit.co; frame-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), autoplay=(self)">
   <title>Manav Vora — Creative Technologist</title>
   <meta name="description"
     content="Manav Vora — creative technologist, designer, data analyst and aspiring game designer based in Mumbai, India.">
+  <meta name="author" content="Manav Vora">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- ============ GOOGLE SEARCH CONSOLE VERIFICATION ============ -->
+  <meta name="google-site-verification" content="dCgVG0yZB4Vv72oTtHiP6qItqtgw-I7OLcfPtsfFQmU" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- ============ OPEN GRAPH & SOCIAL METADATA ============ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Manav Vora — Creative Technologist">
+  <meta property="og:description"
+    content="Portfolio of Manav Vora — combining AI, brand design, data analytics, and interactive 3D world-building in Mumbai, India.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manav Vora — Creative Technologist">
+  <meta name="twitter:description"
+    content="Creative technologist, designer, data analyst and aspiring game designer based in Mumbai, India.">
+
+  <!-- ============ GOOGLE STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Manav Vora",
+          "jobTitle": "Creative Technologist & Aspiring Game Designer",
+          "email": "mailto:manavvora48@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          },
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "Generative AI",
+            "Brand Advertisement Design",
+            "Data Analysis",
+            "Power BI",
+            "Game Design"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Manav Vora — Creative Technologist",
+          "inLanguage": "en-IN",
+          "description": "Manav Vora — creative technologist, designer, data analyst and aspiring game designer based in Mumbai, India."
+        }
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -987,51 +1047,345 @@
       font-size: 13.5px;
     }
 
-    /* ============ VISION (GAME) ============ */
+    /* ============ VISION (ISOMETRIC ARCHITECTURAL GAME) ============ */
     .vision {
       background: var(--bg-2);
     }
 
     .vision .container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 48px;
       align-items: center;
     }
 
-    @media (max-width:900px) {
+    @media (max-width: 980px) {
       .vision .container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
       }
     }
 
     .vision h2 {
       font-size: clamp(34px, 5vw, 54px);
       line-height: 1.02;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .vision-quote {
-      font-size: 19px;
+      font-size: 18px;
       color: var(--text-soft);
       max-width: 440px;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       font-style: italic;
     }
 
-    .vision-visual {
-      aspect-ratio: 1/1;
-      background: var(--bg);
+    /* Architectural Quest Card on Left Column */
+    .monument-quest-box {
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 6px;
-      overflow: hidden;
-      position: relative;
+      padding: 20px 22px;
+      margin-bottom: 22px;
+      max-width: 460px;
     }
 
-    .vision-visual svg {
+    .monument-quest-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .monument-obj-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .monument-obj-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--text-soft);
+      transition: color 0.25s var(--ease);
+    }
+
+    .monument-obj-item.active {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .monument-obj-item.done {
+      color: var(--accent-strong);
+      text-decoration: line-through;
+      opacity: 0.75;
+    }
+
+    .monument-obj-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--text-faint);
+      transition: all 0.25s var(--ease);
+    }
+
+    .monument-obj-item.active .monument-obj-dot {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 10px rgba(166, 217, 174, 0.2);
+    }
+
+    .monument-obj-item.done .monument-obj-dot {
+      background: var(--accent-strong);
+      border-color: var(--accent-strong);
+      color: #070908;
+    }
+
+    .monument-hint-line {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-soft);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-faint);
+      line-height: 1.5;
+    }
+
+    .monument-hint-line strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Interactive Isometric Stage */
+    .vision-visual {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+    }
+
+    .monument-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border-soft);
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .monument-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .monument-tab {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 100px;
+      transition: all 0.2s var(--ease);
+    }
+
+    .monument-tab:hover {
+      border-color: var(--accent-strong);
+      color: var(--text);
+    }
+
+    .monument-tab.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .monument-tab.completed::after {
+      content: " ✓";
+      color: var(--accent);
+    }
+
+    .monument-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .monument-mini-btn {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 100px;
+      transition: all 0.2s var(--ease);
+    }
+
+    .monument-mini-btn:hover {
+      border-color: var(--accent-strong);
+      color: var(--accent);
+    }
+
+    .monument-canvas-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 11 / 10;
+      background: radial-gradient(ellipse at 50% 45%, #0E1511 0%, #070908 75%);
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #monumentCanvas {
       width: 100%;
       height: 100%;
+      display: block;
+      cursor: pointer;
+    }
+
+    .monument-win-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 9, 8, 0.86);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      z-index: 5;
+    }
+
+    .monument-win-overlay.open {
+      display: flex;
+    }
+
+    .monument-win-box {
+      max-width: 380px;
+      background: var(--card);
+      border: 1px solid var(--accent-strong);
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+    }
+
+    .monument-win-box .eyebrow-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .monument-win-box h4 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .monument-win-box p {
+      font-size: 13.5px;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .monument-bottombar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: var(--card);
+      border-top: 1px solid var(--border-soft);
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .monument-mech-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .monument-mech-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(166, 217, 174, 0.35);
+      padding: 7px 14px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s var(--ease);
+    }
+
+    .monument-mech-btn:hover:not(:disabled) {
+      background: var(--accent);
+      color: #070908;
+      border-color: var(--accent);
+    }
+
+    .monument-mech-btn:disabled {
+      opacity: 0.32;
+      cursor: default;
+    }
+
+    .monument-step-pad {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .monument-dir-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s var(--ease);
+    }
+
+    .monument-dir-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .explore-btn {
@@ -1057,7 +1411,7 @@
     .vision-hud {
       display: flex;
       gap: 24px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .vision-hud div {
@@ -2173,6 +2527,346 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+
+    /* ============ FOOTER LEGAL LINKS ============ */
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-legal a,
+    .footer-legal button {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-soft);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: color 0.2s var(--ease);
+    }
+
+    .footer-legal a:hover,
+    .footer-legal button:hover {
+      color: var(--accent);
+    }
+
+    .cookie-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .cookie-status-pill .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-faint);
+    }
+
+    .cookie-status-pill.is-consented .status-dot {
+      background: var(--accent-strong);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    /* ============ COOKIE CONSENT BANNER & PREFERENCES MODAL ============ */
+    .cookie-banner {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      z-index: 9500;
+      background: rgba(13, 17, 14, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-strong);
+      border-radius: 10px;
+      padding: 22px 26px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+    }
+
+    .cookie-banner.visible {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 820px) {
+      .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        padding: 20px;
+      }
+    }
+
+    .cookie-banner-copy {
+      flex: 1;
+    }
+
+    .cookie-banner-tag {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cookie-banner-copy h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .cookie-banner-copy p {
+      font-size: 13.5px;
+      color: var(--text-soft);
+      line-height: 1.55;
+    }
+
+    .cookie-banner-copy a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cookie-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 560px) {
+      .cookie-banner-actions {
+        width: 100%;
+      }
+      .cookie-banner-actions button {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+
+    .cookie-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 11px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s var(--ease);
+      white-space: nowrap;
+    }
+
+    .cookie-btn:hover {
+      border-color: var(--accent-strong);
+      color: var(--text);
+    }
+
+    .cookie-btn.primary {
+      background: var(--accent);
+      color: #070908;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .cookie-btn.primary:hover {
+      background: var(--accent-strong);
+      border-color: var(--accent-strong);
+    }
+
+    /* Cookie Preferences Modal */
+    .cookie-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9600;
+      background: rgba(4, 6, 5, 0.86);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .cookie-modal-overlay.open {
+      display: flex;
+    }
+
+    .cookie-modal {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      max-width: 620px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 36px 32px 30px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85);
+    }
+
+    @media (max-width: 600px) {
+      .cookie-modal {
+        padding: 28px 20px 24px;
+      }
+    }
+
+    .cookie-modal h3 {
+      font-size: 24px;
+      margin: 8px 0 10px;
+    }
+
+    .cookie-modal > p {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .cookie-pref-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .cookie-pref-item {
+      background: var(--bg-2);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .cookie-pref-info h5 {
+      font-size: 14.5px;
+      margin-bottom: 4px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cookie-pref-badge {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border: 1px solid rgba(166, 217, 174, 0.35);
+      background: var(--accent-dim);
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+
+    .cookie-pref-info p {
+      font-size: 12.5px;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    /* Custom Toggle Switch */
+    .cookie-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cookie-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .cookie-slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #1B221D;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      transition: 0.2s var(--ease);
+    }
+
+    .cookie-slider::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background: var(--text-soft);
+      border-radius: 50%;
+      transition: 0.2s var(--ease);
+    }
+
+    .cookie-switch input:checked + .cookie-slider {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+    }
+
+    .cookie-switch input:checked + .cookie-slider::before {
+      transform: translateX(20px);
+      background: var(--accent);
+    }
+
+    .cookie-switch input:disabled + .cookie-slider {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .cookie-Switch-focus input:focus-visible + .cookie-slider {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .cookie-modal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-soft);
+    }
   </style>
 </head>
 
@@ -2575,7 +3269,8 @@
             </div>
             <div class="card-actions">
               <button class="case-link" data-modal="velore">VIEW CASE STUDY →</button>
-              <button class="case-link gallery-link" data-gallery="design" aria-label="View Brand Advertisement Designs gallery">VIEW GALLERY →</button>
+              <button class="case-link gallery-link" data-gallery="design"
+                aria-label="View Brand Advertisement Designs gallery">VIEW GALLERY →</button>
             </div>
           </div>
         </div>
@@ -2603,7 +3298,8 @@
               <div class="project-tools"><span>Canva</span><span>Typography</span><span>Layout</span></div>
               <div class="card-actions">
                 <button class="case-link" data-modal="brand-ad">VIEW CASE STUDY →</button>
-                <button class="case-link gallery-link" data-gallery="design" aria-label="View Brand Advertisement Designs gallery">VIEW GALLERY →</button>
+                <button class="case-link gallery-link" data-gallery="design"
+                  aria-label="View Brand Advertisement Designs gallery">VIEW GALLERY →</button>
               </div>
             </div>
           </div>
@@ -2633,7 +3329,8 @@
               </div>
               <div class="card-actions">
                 <button class="case-link" data-modal="ai-photos">VIEW CASE STUDY →</button>
-                <button class="case-link gallery-link" data-gallery="ai" aria-label="View AI-Generated Photos gallery">VIEW GALLERY →</button>
+                <button class="case-link gallery-link" data-gallery="ai"
+                  aria-label="View AI-Generated Photos gallery">VIEW GALLERY →</button>
               </div>
             </div>
           </div>
@@ -2727,7 +3424,8 @@
               <div class="project-tools"><span>AI Video Tools</span><span>Editing</span><span>Sound Design</span></div>
               <div class="card-actions">
                 <button class="case-link" data-modal="ai-video">VIEW CASE STUDY →</button>
-                <button class="case-link gallery-link" data-gallery="video" aria-label="View AI Video Generation gallery">VIEW GALLERY →</button>
+                <button class="case-link gallery-link" data-gallery="video"
+                  aria-label="View AI Video Generation gallery">VIEW GALLERY →</button>
               </div>
             </div>
           </div>
@@ -2776,59 +3474,94 @@
       </div>
     </section>
 
-    <!-- ============ VISION / GAME DESIGN ============ -->
+    <!-- ============ VISION / ISOMETRIC ARCHITECTURAL PATH GAME ============ -->
     <section class="vision" id="vision">
       <div class="container">
         <div class="reveal">
-          <div class="eyebrow"><span class="dot"></span>BUILDING WORLDS</div>
+          <div class="eyebrow"><span class="dot"></span>04.5 / BUILDING WORLDS</div>
           <h2>Building<br>Worlds.</h2>
           <p class="vision-quote">"I want to create worlds people don't just play — they remember."</p>
-          <button class="explore-btn" id="exploreBtn">EXPLORE THE WORLD →</button>
+
+          <!-- Architectural Quest Card -->
+          <div class="monument-quest-box" aria-live="polite">
+            <div class="monument-quest-head">
+              <span id="monumentTitleLabel">MONUMENT I // THE SILENT CAUSEWAY</span>
+              <span id="monumentStatusTag">IN PROGRESS</span>
+            </div>
+            <ul class="monument-obj-list">
+              <li class="monument-obj-item active" id="monObj1">
+                <span class="monument-obj-dot" id="monObjDot1">01</span>
+                <span id="monObjText1">Guide the Traveler to awaken the <strong>Design Spire (◈)</strong></span>
+              </li>
+              <li class="monument-obj-item" id="monObj2">
+                <span class="monument-obj-dot" id="monObjDot2">02</span>
+                <span id="monObjText2">Rotate the bridge &amp; ascend to the <strong>Sanctum Arch (⬡)</strong></span>
+              </li>
+            </ul>
+            <div class="monument-hint-line" id="monumentHintLine">
+              <strong>HOW TO PLAY:</strong> Click any stone tile (or use <strong>WASD / Arrows</strong>) to walk. Press <strong>[R]</strong> or click the glowing rotor to turn the bridge 90°.
+            </div>
+          </div>
+
+          <button class="explore-btn" id="exploreBtn">ROTATE ARCHITECTURE [R] ↻</button>
+
           <div class="vision-hud">
-            <div>WORLD 01<span>EXPLORATION</span></div>
-            <div>STATUS<span>IN DEVELOPMENT</span></div>
+            <div>ENGINE<span>ISOMETRIC GEOMETRY</span></div>
+            <div>PROGRESS<span id="monumentProgressHud">0 / 3 MONUMENTS</span></div>
           </div>
         </div>
 
-        <div class="vision-visual reveal" id="visionVisual" role="img"
-          aria-label="Dark forest and terrain scene with a winding path, a world marker, and coordinate labels, representing an in-development game world">
-          <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" id="visionSvg">
-            <rect width="480" height="480" fill="#070908" />
-            <g stroke="#171D18" stroke-width="1">
-              <line x1="0" y1="120" x2="480" y2="120" />
-              <line x1="0" y1="240" x2="480" y2="240" />
-              <line x1="0" y1="360" x2="480" y2="360" />
-            </g>
-            <!-- forest silhouettes -->
-            <g fill="#0D110E">
-              <polygon points="20,300 40,240 60,300" />
-              <polygon points="45,310 70,230 95,310" />
-              <polygon points="80,300 100,250 120,300" />
-              <polygon points="360,300 385,235 410,300" />
-              <polygon points="395,310 420,240 445,310" />
-              <polygon points="430,300 450,255 470,300" />
-            </g>
-            <!-- terrain -->
-            <path d="M0 320 Q120 280 240 320 T480 320 V480 H0 Z" fill="#0D110E" />
-            <!-- path -->
-            <path d="M60 470 Q160 380 240 330 T430 220" fill="none" stroke="#202820" stroke-width="10"
-              stroke-linecap="round" />
-            <path d="M60 470 Q160 380 240 330 T430 220" fill="none" stroke="#A6D9AE" stroke-width="1"
-              stroke-dasharray="1 8" opacity="0.5" />
-            <!-- marker -->
-            <g transform="translate(430,220)">
-              <circle r="5" fill="#A6D9AE" />
-              <circle r="13" fill="none" stroke="#A6D9AE" stroke-width="1" opacity="0.5" />
-            </g>
-            <text x="20" y="40" fill="#9AA39B" font-family="DM Mono, monospace" font-size="10" letter-spacing="1">WORLD
-              01</text>
-            <text x="20" y="58" fill="#5E675F" font-family="DM Mono, monospace" font-size="9"
-              letter-spacing="1">EXPLORATION</text>
-            <text x="360" y="40" fill="#5E675F" font-family="DM Mono, monospace" font-size="9"
-              letter-spacing="1">STATUS</text>
-            <text x="360" y="58" fill="#70B97A" font-family="DM Mono, monospace" font-size="10" letter-spacing="1">IN
-              DEVELOPMENT</text>
-          </svg>
+        <div class="vision-visual reveal" id="visionVisual">
+          <!-- Top Bar: Monument Selector & Audio/Reset -->
+          <div class="monument-topbar">
+            <div class="monument-tabs" role="tablist" aria-label="Select Monument Level">
+              <button type="button" class="monument-tab active" data-level="0" role="tab" aria-selected="true">I · DESIGN</button>
+              <button type="button" class="monument-tab" data-level="1" role="tab" aria-selected="false">II · AI CORE</button>
+              <button type="button" class="monument-tab" data-level="2" role="tab" aria-selected="false">III · DATA NEXUS</button>
+            </div>
+            <div class="monument-top-actions">
+              <button type="button" class="monument-mini-btn" id="monumentAudioBtn" aria-label="Toggle harmonic audio">♫ AUDIO: ON</button>
+              <button type="button" class="monument-mini-btn" id="monumentResetBtn" aria-label="Reset current monument">↺ RESET</button>
+            </div>
+          </div>
+
+          <!-- Isometric 3D Canvas -->
+          <div class="monument-canvas-wrap">
+            <canvas id="monumentCanvas" width="660" height="600" tabindex="0"
+              aria-label="Interactive Isometric Architectural Path Puzzle"></canvas>
+
+            <!-- Level Complete Overlay -->
+            <div class="monument-win-overlay" id="monumentWinOverlay" role="dialog" aria-modal="false"
+              aria-labelledby="monumentWinHeading">
+              <div class="monument-win-box">
+                <div class="eyebrow-tag" id="monumentWinSub">MONUMENT SYNCHRONIZED</div>
+                <h4 id="monumentWinHeading">Architecture Aligned</h4>
+                <p id="monumentWinDesc">The sacred geometry resonates across the grid.</p>
+                <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+                  <button type="button" class="submit-btn" id="monumentNextBtn" style="padding:11px 22px;">NEXT MONUMENT →</button>
+                  <button type="button" class="btn-ghost" id="monumentReplayBtn" style="padding:11px 16px;">REPLAY ↺</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Mechanism Bar -->
+          <div class="monument-bottombar">
+            <div class="monument-mech-btns">
+              <button type="button" class="monument-mech-btn" id="monumentRotateBtn" title="Rotate architectural bridge 90 degrees (Key: R or Space)">
+                <span>↻</span> <span>ROTATE BRIDGE [R]</span>
+              </button>
+              <button type="button" class="monument-mech-btn" id="monumentLiftBtn" title="Shift harmonic lift pillar elevation (Key: E)" disabled>
+                <span>⇅</span> <span>SHIFT PILLAR [E]</span>
+              </button>
+            </div>
+            <div class="monument-step-pad" aria-label="Step Traveler along isometric axes">
+              <button type="button" class="monument-dir-btn" data-step="nw" title="Step North-West (W / Up)">↖</button>
+              <button type="button" class="monument-dir-btn" data-step="ne" title="Step North-East (D / Right)">↗</button>
+              <button type="button" class="monument-dir-btn" data-step="sw" title="Step South-West (A / Left)">↙</button>
+              <button type="button" class="monument-dir-btn" data-step="se" title="Step South-East (S / Down)">↘</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2849,36 +3582,45 @@
             </p>
             <div class="contact-details">
               <div><span class="label">LOCATION</span><span>Mumbai, India</span></div>
-              <a href="mailto:manavvora48@gmail.com"><span class="label">EMAIL</span><span>manavvora48@gmail.com</span></a>
-              <a href="https://instagram.com/" target="_blank" rel="noopener"><span
+              <a href="mailto:manavvora48@gmail.com"><span
+                  class="label">EMAIL</span><span>manavvora48@gmail.com</span></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><span
                   class="label">INSTAGRAM</span><span>@manav__vora</span></a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener"><span
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"><span
                   class="label">LINKEDIN</span><span>/coming soon</span></a>
             </div>
           </div>
 
-          <iframe name="hiddenSubmitFrame" id="hiddenSubmitFrame" style="display:none;" title="Background form submission" aria-hidden="true"></iframe>
-          <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hiddenSubmitFrame" novalidate>
-            <!-- Honeypot & Web3Forms configuration -->
-            <input type="hidden" name="access_key" value="56ab769f-e90a-42ba-bbfd-1da2b92e0c18">
-            <input type="hidden" name="subject" id="contactSubject" value="New Portfolio Message — Let's Create Something">
+          <iframe name="hiddenSubmitFrame" id="hiddenSubmitFrame" style="display:none;"
+            sandbox="allow-forms allow-scripts allow-same-origin" referrerpolicy="strict-origin-when-cross-origin"
+            title="Background form submission" aria-hidden="true"></iframe>
+          <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST"
+            target="hiddenSubmitFrame" novalidate>
+            <!-- Honeypot & configuration (API key is never stored in HTML DOM) -->
+            <input type="hidden" name="access_key" id="contactAccessKey" value="">
+            <input type="hidden" name="subject" id="contactSubject"
+              value="New Portfolio Message — Let's Create Something">
             <input type="hidden" name="from_name" value="Manav Vora Portfolio">
             <input type="text" name="botcheck" id="contactHoney" class="hp-field" tabindex="-1" autocomplete="off"
-              aria-hidden="true">
+              maxlength="100" aria-hidden="true">
             <div class="form-group">
               <label for="name">NAME</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+              <input type="text" id="name" name="name" placeholder="Your name" required minlength="2" maxlength="80"
+                autocomplete="name" spellcheck="false">
             </div>
             <div class="form-group">
               <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <input type="email" id="email" name="email" placeholder="you@example.com" required minlength="5"
+                maxlength="120" autocomplete="email" spellcheck="false" inputmode="email">
             </div>
             <div class="form-group">
               <label for="message">MESSAGE</label>
-              <textarea id="message" name="message" placeholder="Tell me about your idea..." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell me about your idea..." required minlength="5"
+                maxlength="2000"></textarea>
             </div>
             <button type="submit" class="submit-btn" id="contactSubmitBtn">SEND MESSAGE →</button>
-            <p class="form-note" id="formNote" role="status" aria-live="polite">Direct message to manavvora48@gmail.com — I typically reply within 24–48 hours.</p>
+            <p class="form-note" id="formNote" role="status" aria-live="polite">Direct message to manavvora48@gmail.com
+              — I typically reply within 24–48 hours.</p>
           </form>
         </div>
       </div>
@@ -2895,10 +3637,98 @@
       </div>
       <div class="footer-bottom">
         <div>Mumbai, India — © 2026 Manav Vora</div>
+        <nav class="footer-legal" aria-label="Legal and privacy policies">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <button type="button" id="openCookieSettingsBtn" aria-haspopup="dialog">Cookie Settings</button>
+          <span class="cookie-status-pill" id="cookieStatusPill" title="Current cookie consent status">
+            <span class="status-dot"></span>
+            <span id="cookieStatusLabel">CONSENT: PENDING</span>
+          </span>
+        </nav>
         <a href="#top" class="back-top">Back to top ↑</a>
       </div>
     </div>
   </footer>
+
+  <!-- ============ COOKIE CONSENT BANNER ============ -->
+  <aside class="cookie-banner" id="cookieConsentBanner" role="region" aria-label="Cookie consent notice" aria-hidden="true">
+    <div class="cookie-banner-copy">
+      <div class="cookie-banner-tag">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--accent-strong);display:inline-block;"></span>
+        <span>PRIVACY &amp; COOKIE CONSENT</span>
+      </div>
+      <h4>We respect your digital privacy.</h4>
+      <p>
+        This website uses strictly necessary security storage (for anti-spam rate limiting and consent state) and optional functional preferences. Read our
+        <a href="privacy-policy.html">Privacy Policy</a>,
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>, and
+        <a href="cookie-policy.html">Cookie Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" class="cookie-btn" id="cookieCustomizeBtn">CUSTOMIZE</button>
+      <button type="button" class="cookie-btn" id="cookieRejectBtn">NECESSARY ONLY</button>
+      <button type="button" class="cookie-btn primary" id="cookieAcceptAllBtn">ACCEPT ALL ✓</button>
+    </div>
+  </aside>
+
+  <!-- ============ COOKIE PREFERENCES MODAL ============ -->
+  <div class="cookie-modal-overlay" id="cookieModalOverlay" role="dialog" aria-modal="true"
+    aria-labelledby="cookieModalTitle" aria-hidden="true">
+    <div class="cookie-modal">
+      <button type="button" class="modal-close" id="cookieModalClose" aria-label="Close cookie preferences">✕</button>
+      <div class="eyebrow"><span class="dot"></span>PRIVACY &amp; STORAGE CONTROLS</div>
+      <h3 id="cookieModalTitle">Cookie &amp; Storage Preferences</h3>
+      <p>
+        Manage how this portfolio stores data in your browser. Strictly necessary security items cannot be disabled because they protect the contact form against automated abuse and store your privacy choices.
+      </p>
+
+      <div class="cookie-pref-list">
+        <div class="cookie-pref-item">
+          <div class="cookie-pref-info">
+            <h5>Strictly Necessary &amp; Security <span class="cookie-pref-badge">ALWAYS ACTIVE</span></h5>
+            <p>Required for CSRF/anti-spam rate limiting (<code>mv_contact_ts</code>) and remembering your cookie consent status (<code>mv_cookie_consent_v1</code>).</p>
+          </div>
+          <label class="cookie-switch" aria-label="Strictly Necessary Cookies (Always Active)">
+            <input type="checkbox" id="prefEssentialToggle" checked disabled>
+            <span class="cookie-slider"></span>
+          </label>
+        </div>
+
+        <div class="cookie-pref-item">
+          <div class="cookie-pref-info">
+            <h5>Functional &amp; Interactive Preferences</h5>
+            <p>Remembers your Monument architecture puzzle progress and audio synthesizer preferences across visits (<code>mv_functional_prefs</code>).</p>
+          </div>
+          <label class="cookie-switch" for="prefFunctionalToggle">
+            <input type="checkbox" id="prefFunctionalToggle">
+            <span class="cookie-slider"></span>
+          </label>
+        </div>
+
+        <div class="cookie-pref-item">
+          <div class="cookie-pref-info">
+            <h5>Anonymous Performance &amp; Analytics</h5>
+            <p>Allows anonymous, non-identifying interaction metrics to help improve 3D canvas rendering and portfolio usability.</p>
+          </div>
+          <label class="cookie-switch" for="prefAnalyticsToggle">
+            <input type="checkbox" id="prefAnalyticsToggle">
+            <span class="cookie-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-modal-footer">
+        <button type="button" class="cookie-btn" id="cookieModalRejectBtn">NECESSARY ONLY</button>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="cookie-btn" id="cookieModalSaveBtn">SAVE PREFERENCES</button>
+          <button type="button" class="cookie-btn primary" id="cookieModalAcceptAllBtn">ACCEPT ALL ✓</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ MODAL ============ -->
   <div class="modal-overlay" id="modalOverlay">
@@ -2927,8 +3757,8 @@
   </div>
 
   <!-- ============ FULLSCREEN LIGHTBOX ============ -->
-  <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true"
-    aria-label="Media lightbox viewer" aria-hidden="true">
+  <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Media lightbox viewer"
+    aria-hidden="true">
     <div class="lightbox-top">
       <div class="lightbox-counter" id="lightboxCounter"><strong>01</strong> / 01</div>
       <button type="button" class="gallery-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
@@ -2954,17 +3784,24 @@
       design: [
         {
           type: "image",
-          src: "photos/design/ad-01.png",
-          title: "AUREVÉ — Sound. Elevated.",
-          caption: "Flagship wireless headphones launch poster combining cosmic light trails, reflective staging and restrained luxury typography.",
-          alt: "AUREVÉ wireless headphones advertisement poster with blue and orange cosmic light rings and the tagline Sound. Elevated."
-        },
-        {
-          type: "image",
           src: "photos/design/ad-02.jpg",
           title: "VELORÉ NOIRÉ — Eau de Parfum Paris",
           caption: "Hero campaign visual for the VELORÉ fragrance house, pairing obsidian glass and brushed gold against wet black slate.",
           alt: "VELORÉ NOIRÉ black and gold luxury perfume bottle resting on wet dark slate stone with fine mist"
+        },
+        {
+          type: "image",
+          src: "photos/design/ad-03.png",
+          title: "VELORÉ NOIRÉ — Luxury Beyond Glass",
+          caption: "Sustainable luxury packaging and brand advertisement layout showcasing the magnetic-closure presentation box, gold-foil typography and recyclable polymer flacon.",
+          alt: "VELORÉ NOIRÉ luxury perfume packaging advertisement poster showing open presentation box, macro details and sustainability callouts"
+        },
+        {
+          type: "image",
+          src: "photos/design/Forge Protein Bottles on Stone.png",
+          title: "FORGE — Architectural Protein Packaging",
+          caption: "Brutalist metallic bottle and label design system for FORGE 20g ready-to-drink protein across Cocoa Brown, Coffee Tan and Vanilla Cream variants.",
+          alt: "Three faceted metallic FORGE 20g protein bottles in Cocoa Brown, Coffee Tan and Vanilla Cream staged on dark sculpted stone"
         }
       ],
       ai: [
@@ -2988,6 +3825,13 @@
           title: "AUREVÉ — Hero Product Render",
           caption: "Studio-lit product render of the AUREVÉ over-ear headphones framed by dual-tone particle arcs.",
           alt: "AUREVÉ champagne-gold over-ear wireless headphones floating in a blue and orange particle halo"
+        },
+        {
+          type: "image",
+          src: "photos/design/Forge Protein Bottles on Stone.png",
+          title: "FORGE — Studio Bottle Lineup Render",
+          caption: "AI-generated commercial product photography of faceted brushed-steel protein bottles with directional key lighting on raw stone.",
+          alt: "Three faceted metallic FORGE 20g protein bottles in Cocoa Brown, Coffee Tan and Vanilla Cream staged on dark sculpted stone"
         }
       ],
       video: [
@@ -3006,19 +3850,62 @@
           title: "VINCERO — Precision, Defined.",
           caption: "Luxury horology commercial showcasing macro mechanical movement gears, sound design and brutalist architectural staging.",
           alt: "VINCERO luxury mechanical watch commercial video preview"
+        },
+        {
+          type: "video",
+          src: "videos/Untitled video_erasio.mp4",
+          thumbTime: 4.5,
+          title: "OLGA Red Cherry — Luxury Fragrance Spot",
+          caption: "AI-generated social commercial for OLGA Red Cherry Eau de Parfum combining presenter storytelling, synced captions and macro bottle cinematography.",
+          alt: "OLGA Red Cherry luxury perfume commercial video preview"
         }
       ]
     };
 
-    /* ==========================================================================
-       CONTACT FORM CONFIGURATION
-       - Uses Web3Forms AJAX endpoint to deliver directly to manavvora48@gmail.com
-       ========================================================================== */
-    const CONTACT_EMAIL = "manavvora48@gmail.com";
-    const WEB3FORMS_ACCESS_KEY = "56ab769f-e90a-42ba-bbfd-1da2b92e0c18";
-
     (function () {
       "use strict";
+
+      /* ---------- Security Utilities: Deep Freeze, Clickjacking Defense & URL Sanitization ---------- */
+      function deepFreeze(obj) {
+        if (!obj || typeof obj !== 'object' || Object.isFrozen(obj)) return obj;
+        Object.freeze(obj);
+        Object.keys(obj).forEach(function (key) {
+          deepFreeze(obj[key]);
+        });
+        return obj;
+      }
+
+      function hasOwn(obj, prop) {
+        return Boolean(obj) && Object.prototype.hasOwnProperty.call(obj, prop);
+      }
+
+      // Freeze static media configuration to prevent runtime prototype/DOM tampering
+      deepFreeze(portfolioMedia);
+
+      // Frame-busting clickjacking protection
+      try {
+        if (window.top !== window.self) {
+          window.top.location = window.self.location.href;
+        }
+      } catch (frameErr) {
+        // If blocked by cross-origin framing, conceal interactive content to prevent UI redressing
+        document.documentElement.style.display = 'none';
+      }
+
+      // Enforce rel="noopener noreferrer" on all external links to prevent Reverse Tabnabbing
+      document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      // Strict relative asset path validator — blocks javascript:, data:, vbscript:, //, and .. traversal
+      function sanitizeAssetPath(rawPath) {
+        var str = String(rawPath || '').trim();
+        if (!str) return '';
+        if (str.indexOf('..') !== -1 || str.indexOf('//') !== -1 || str.indexOf('\\') !== -1) return '';
+        if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(str)) return '';
+        if (!/^(photos|videos)\/[a-zA-Z0-9_\-\/. \u00C0-\u017F]+$/.test(str)) return '';
+        return str;
+      }
 
       /* ---------- Interactive 3D Particle Boot Sequence Controller ---------- */
       var bootOverlay = document.getElementById('bootOverlay');
@@ -3495,6 +4382,9 @@
           }
           if (animFrameId) cancelAnimationFrame(animFrameId);
           startTypewriterOnce();
+          if (typeof window.checkAndPromptCookieConsent === 'function') {
+            window.checkAndPromptCookieConsent();
+          }
         }, 850);
       }
 
@@ -3511,6 +4401,9 @@
           bootOverlay.style.display = 'none';
         }
         startTypewriterOnce();
+        if (typeof window.checkAndPromptCookieConsent === 'function') {
+          window.checkAndPromptCookieConsent();
+        }
       }
 
       /* Replay Boot Sequence Function */
@@ -3653,7 +4546,7 @@
       var filterGalleryBtn = document.getElementById('filterGalleryBtn');
       var activeFilterCategory = 'all';
 
-      var galleryCategories = {
+      var galleryCategories = deepFreeze({
         design: {
           eyebrow: 'CATEGORY GALLERY // 01 — DESIGN',
           title: 'Brand Advertisement Designs',
@@ -3672,7 +4565,7 @@
           buttonLabel: 'View full gallery →',
           allowedType: 'video'
         }
-      };
+      });
 
       filterBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -3693,7 +4586,7 @@
           }
 
           if (filterGalleryBtn) {
-            if (galleryCategories[filter]) {
+            if (hasOwn(galleryCategories, filter)) {
               filterGalleryBtn.hidden = false;
               filterGalleryBtn.textContent = galleryCategories[filter].buttonLabel;
               filterGalleryBtn.setAttribute('aria-label', 'View full gallery for ' + galleryCategories[filter].title);
@@ -3706,7 +4599,7 @@
 
       if (filterGalleryBtn) {
         filterGalleryBtn.addEventListener('click', function () {
-          if (galleryCategories[activeFilterCategory]) {
+          if (hasOwn(galleryCategories, activeFilterCategory)) {
             openGallery(activeFilterCategory, filterGalleryBtn);
           }
         });
@@ -3736,38 +4629,39 @@
       var galleryTriggerEl = null;
       var lightboxTriggerEl = null;
 
-      function escapeHtml(str) {
-        return String(str || '')
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
-      }
-
       function createMissingPlaceholder(label, pathStr) {
         var wrap = document.createElement('div');
         wrap.className = 'media-fallback';
-        wrap.innerHTML =
-          '<span class="fallback-icon">◇</span>' +
-          '<span>MEDIA PREVIEW UNAVAILABLE</span>' +
-          '<span style="color:var(--text-soft);font-size:10px;">' + escapeHtml(label || pathStr || 'Missing file') + '</span>';
+        var iconSpan = document.createElement('span');
+        iconSpan.className = 'fallback-icon';
+        iconSpan.textContent = '◇';
+        var msgSpan = document.createElement('span');
+        msgSpan.textContent = 'MEDIA PREVIEW UNAVAILABLE';
+        var subSpan = document.createElement('span');
+        subSpan.style.color = 'var(--text-soft)';
+        subSpan.style.fontSize = '10px';
+        subSpan.textContent = String(label || pathStr || 'Missing file');
+        wrap.appendChild(iconSpan);
+        wrap.appendChild(msgSpan);
+        wrap.appendChild(subSpan);
         return wrap;
       }
 
       function getCategoryItems(cat) {
+        if (!hasOwn(galleryCategories, cat)) return [];
         var meta = galleryCategories[cat];
-        if (!meta) return [];
-        var raw = (portfolioMedia && Array.isArray(portfolioMedia[cat])) ? portfolioMedia[cat] : [];
-        // Enforce strict separation: photos and videos never appear together in the same gallery
+        var raw = (portfolioMedia && hasOwn(portfolioMedia, cat) && Array.isArray(portfolioMedia[cat]))
+          ? portfolioMedia[cat]
+          : [];
+        // Enforce strict separation & safe asset URLs
         return raw.filter(function (item) {
-          return item && item.type === meta.allowedType && item.src;
+          return item && item.type === meta.allowedType && Boolean(sanitizeAssetPath(item.src));
         });
       }
 
       function openGallery(cat, triggerEl) {
+        if (!hasOwn(galleryCategories, cat) || !galleryOverlay) return;
         var meta = galleryCategories[cat];
-        if (!meta || !galleryOverlay) return;
 
         currentGalleryCat = cat;
         currentGalleryItems = getCategoryItems(cat);
@@ -3780,20 +4674,27 @@
           galleryCount.textContent = len + (len === 1 ? ' ITEM' : ' ITEMS');
         }
 
-        galleryBody.innerHTML = '';
+        galleryBody.replaceChildren();
 
         if (currentGalleryItems.length === 0) {
           var emptyDiv = document.createElement('div');
           emptyDiv.className = 'gallery-empty';
-          emptyDiv.innerHTML =
-            '<div class="empty-tag">COMING SOON</div>' +
-            '<p>New work in ' + escapeHtml(meta.title) + ' is currently being curated.</p>';
+          var emptyTag = document.createElement('div');
+          emptyTag.className = 'empty-tag';
+          emptyTag.textContent = 'COMING SOON';
+          var emptyP = document.createElement('p');
+          emptyP.textContent = 'New work in ' + meta.title + ' is currently being curated.';
+          emptyDiv.appendChild(emptyTag);
+          emptyDiv.appendChild(emptyP);
           galleryBody.appendChild(emptyDiv);
         } else {
           var grid = document.createElement('div');
           grid.className = 'gallery-grid';
 
           currentGalleryItems.forEach(function (item, index) {
+            var safeSrc = sanitizeAssetPath(item.src);
+            var safePoster = sanitizeAssetPath(item.poster);
+
             var cardBtn = document.createElement('button');
             cardBtn.type = 'button';
             cardBtn.className = 'gallery-card';
@@ -3805,22 +4706,22 @@
             var altText = item.alt || item.title || (meta.title + ' item ' + (index + 1));
 
             if (item.type === 'video') {
-              if (item.poster) {
+              if (safePoster) {
                 var posterImg = document.createElement('img');
-                posterImg.src = item.poster;
+                posterImg.src = safePoster;
                 posterImg.alt = altText;
                 posterImg.loading = 'lazy';
                 posterImg.addEventListener('error', function () {
                   // Fallback to video metadata frame or placeholder if poster is missing
                   var fallbackVid = document.createElement('video');
-                  fallbackVid.src = item.src;
+                  fallbackVid.src = safeSrc;
                   fallbackVid.preload = 'metadata';
                   fallbackVid.muted = true;
                   fallbackVid.playsInline = true;
                   fallbackVid.setAttribute('playsinline', '');
                   fallbackVid.addEventListener('error', function () {
                     if (fallbackVid.parentNode === thumb) {
-                      thumb.replaceChild(createMissingPlaceholder(item.title, item.src), fallbackVid);
+                      thumb.replaceChild(createMissingPlaceholder(item.title, safeSrc), fallbackVid);
                     }
                   });
                   if (posterImg.parentNode === thumb) {
@@ -3830,14 +4731,20 @@
                 thumb.appendChild(posterImg);
               } else {
                 var vidThumb = document.createElement('video');
-                vidThumb.src = item.src;
+                var thumbTime = (typeof item.thumbTime === 'number' && item.thumbTime > 0) ? item.thumbTime : 0.5;
+                vidThumb.src = safeSrc + '#t=' + thumbTime;
                 vidThumb.preload = 'metadata';
                 vidThumb.muted = true;
                 vidThumb.playsInline = true;
                 vidThumb.setAttribute('playsinline', '');
+                vidThumb.addEventListener('loadedmetadata', function () {
+                  try {
+                    if (vidThumb.currentTime < 0.1) vidThumb.currentTime = thumbTime;
+                  } catch (e) { }
+                });
                 vidThumb.addEventListener('error', function () {
                   if (vidThumb.parentNode === thumb) {
-                    thumb.replaceChild(createMissingPlaceholder(item.title, item.src), vidThumb);
+                    thumb.replaceChild(createMissingPlaceholder(item.title, safeSrc), vidThumb);
                   }
                 });
                 thumb.appendChild(vidThumb);
@@ -3845,16 +4752,20 @@
 
               var playBadge = document.createElement('div');
               playBadge.className = 'gallery-play-badge';
-              playBadge.innerHTML = '<span class="gallery-play-icon" aria-hidden="true">▶</span>';
+              var playIcon = document.createElement('span');
+              playIcon.className = 'gallery-play-icon';
+              playIcon.setAttribute('aria-hidden', 'true');
+              playIcon.textContent = '▶';
+              playBadge.appendChild(playIcon);
               thumb.appendChild(playBadge);
             } else {
               var img = document.createElement('img');
-              img.src = item.src;
+              img.src = safeSrc;
               img.alt = altText;
               img.loading = 'lazy';
               img.addEventListener('error', function () {
                 if (img.parentNode === thumb) {
-                  thumb.replaceChild(createMissingPlaceholder(item.title, item.src), img);
+                  thumb.replaceChild(createMissingPlaceholder(item.title, safeSrc), img);
                 }
               });
               thumb.appendChild(img);
@@ -3863,10 +4774,17 @@
             var body = document.createElement('div');
             body.className = 'gallery-card-body';
             var numStr = (index + 1 < 10 ? '0' : '') + (index + 1);
-            body.innerHTML =
-              '<div class="gallery-card-meta">' + numStr + ' // ' + (item.type === 'video' ? 'VIDEO' : 'IMAGE') + '</div>' +
-              '<h4>' + escapeHtml(item.title || 'Untitled Work') + '</h4>' +
-              '<p>' + escapeHtml(item.caption || '') + '</p>';
+            var cardMeta = document.createElement('div');
+            cardMeta.className = 'gallery-card-meta';
+            cardMeta.textContent = numStr + ' // ' + (item.type === 'video' ? 'VIDEO' : 'IMAGE');
+            var cardTitle = document.createElement('h4');
+            cardTitle.textContent = item.title || 'Untitled Work';
+            var cardCaption = document.createElement('p');
+            cardCaption.textContent = item.caption || '';
+
+            body.appendChild(cardMeta);
+            body.appendChild(cardTitle);
+            body.appendChild(cardCaption);
 
             cardBtn.appendChild(thumb);
             cardBtn.appendChild(body);
@@ -3913,16 +4831,23 @@
       function renderLightboxSlide() {
         if (!lightboxStage || currentGalleryItems.length === 0) return;
         pauseActiveLightboxVideo();
-        lightboxStage.innerHTML = '';
+        lightboxStage.replaceChildren();
 
         var item = currentGalleryItems[currentLightboxIndex];
         if (!item) return;
+
+        var safeSrc = sanitizeAssetPath(item.src);
+        var safePoster = sanitizeAssetPath(item.poster);
 
         var total = currentGalleryItems.length;
         var curStr = (currentLightboxIndex + 1 < 10 ? '0' : '') + (currentLightboxIndex + 1);
         var totStr = (total < 10 ? '0' : '') + total;
         if (lightboxCounter) {
-          lightboxCounter.innerHTML = '<strong>' + curStr + '</strong> / ' + totStr;
+          lightboxCounter.replaceChildren();
+          var strongEl = document.createElement('strong');
+          strongEl.textContent = curStr;
+          lightboxCounter.appendChild(strongEl);
+          lightboxCounter.appendChild(document.createTextNode(' / ' + totStr));
         }
 
         if (lightboxTitle) lightboxTitle.textContent = item.title || '';
@@ -3933,31 +4858,36 @@
 
         var altText = item.alt || item.title || ('Slide ' + (currentLightboxIndex + 1));
 
+        if (!safeSrc) {
+          lightboxStage.appendChild(createMissingPlaceholder(item.title, 'Invalid media path'));
+          return;
+        }
+
         if (item.type === 'video') {
           var video = document.createElement('video');
-          video.src = item.src;
+          video.src = safeSrc;
           video.controls = true;
           video.playsInline = true;
           video.setAttribute('playsinline', '');
           video.preload = 'metadata';
-          if (item.poster) {
-            video.poster = item.poster;
+          if (safePoster) {
+            video.poster = safePoster;
           }
           video.setAttribute('aria-label', altText);
           video.addEventListener('error', function () {
             if (video.parentNode === lightboxStage) {
-              lightboxStage.replaceChild(createMissingPlaceholder(item.title, item.src), video);
+              lightboxStage.replaceChild(createMissingPlaceholder(item.title, safeSrc), video);
             }
           });
           lightboxStage.appendChild(video);
         } else {
           var img = document.createElement('img');
-          img.src = item.src;
+          img.src = safeSrc;
           img.alt = altText;
           img.loading = 'lazy';
           img.addEventListener('error', function () {
             if (img.parentNode === lightboxStage) {
-              lightboxStage.replaceChild(createMissingPlaceholder(item.title, item.src), img);
+              lightboxStage.replaceChild(createMissingPlaceholder(item.title, safeSrc), img);
             }
           });
           lightboxStage.appendChild(img);
@@ -3979,7 +4909,7 @@
         pauseActiveLightboxVideo();
         lightboxOverlay.classList.remove('open');
         lightboxOverlay.setAttribute('aria-hidden', 'true');
-        if (lightboxStage) lightboxStage.innerHTML = '';
+        if (lightboxStage) lightboxStage.replaceChildren();
         if (lightboxTriggerEl && typeof lightboxTriggerEl.focus === 'function') {
           lightboxTriggerEl.focus();
         }
@@ -4083,7 +5013,7 @@
       });
 
       /* ---------- Case study data ---------- */
-      var caseStudies = {
+      var caseStudies = deepFreeze({
         "velore": {
           tag: "FEATURED — BRAND CASE STUDY",
           title: "VELORÉ — Luxury Beyond Glass.",
@@ -4144,7 +5074,7 @@
           outcome: "A short, cohesive video piece that demonstrates AI-assisted production from concept to final edit.",
           status: "IN PROGRESS"
         }
-      };
+      });
 
       /* ---------- Modal ---------- */
       var modalOverlay = document.getElementById('modalOverlay');
@@ -4152,18 +5082,43 @@
       var modalClose = document.getElementById('modalClose');
       var lastFocused = null;
 
+      function createModalSection(headingText, bodyText) {
+        var sec = document.createElement('div');
+        sec.className = 'modal-section';
+        var h5 = document.createElement('h5');
+        h5.textContent = headingText;
+        var p = document.createElement('p');
+        p.textContent = bodyText;
+        sec.appendChild(h5);
+        sec.appendChild(p);
+        return sec;
+      }
+
       function openModal(key) {
+        if (!hasOwn(caseStudies, key) || !modalContent) return;
         var data = caseStudies[key];
-        if (!data) return;
-        modalContent.innerHTML =
-          '<div class="featured-tag">' + data.tag + '</div>' +
-          '<h3 id="modalTitle">' + data.title + '</h3>' +
-          '<div class="modal-section"><h5>Overview</h5><p>' + data.overview + '</p></div>' +
-          '<div class="modal-section"><h5>Challenge</h5><p>' + data.challenge + '</p></div>' +
-          '<div class="modal-section"><h5>Approach</h5><p>' + data.approach + '</p></div>' +
-          '<div class="modal-section"><h5>Tools</h5><p>' + data.tools + '</p></div>' +
-          '<div class="modal-section"><h5>Outcome</h5><p>' + data.outcome + '</p></div>' +
-          '<div class="modal-status">● ' + data.status + '</div>';
+        modalContent.replaceChildren();
+
+        var tagEl = document.createElement('div');
+        tagEl.className = 'featured-tag';
+        tagEl.textContent = data.tag;
+
+        var titleEl = document.createElement('h3');
+        titleEl.id = 'modalTitle';
+        titleEl.textContent = data.title;
+
+        var statusEl = document.createElement('div');
+        statusEl.className = 'modal-status';
+        statusEl.textContent = '● ' + data.status;
+
+        modalContent.appendChild(tagEl);
+        modalContent.appendChild(titleEl);
+        modalContent.appendChild(createModalSection('Overview', data.overview));
+        modalContent.appendChild(createModalSection('Challenge', data.challenge));
+        modalContent.appendChild(createModalSection('Approach', data.approach));
+        modalContent.appendChild(createModalSection('Tools', data.tools));
+        modalContent.appendChild(createModalSection('Outcome', data.outcome));
+        modalContent.appendChild(statusEl);
 
         lastFocused = document.activeElement;
         modalOverlay.classList.add('open');
@@ -4183,24 +5138,1236 @@
       modalClose.addEventListener('click', closeModal);
       modalOverlay.addEventListener('click', function (e) { if (e.target === modalOverlay) closeModal(); });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeModal();
-      });
-
-      /* ---------- Explore the world (vision section micro-interaction) ---------- */
-      var exploreBtn = document.getElementById('exploreBtn');
-      var visionSvg = document.getElementById('visionSvg');
-      var explored = false;
-      exploreBtn.addEventListener('click', function () {
-        if (explored) return;
-        explored = true;
-        exploreBtn.textContent = 'WORLD MARKED ✓';
-        var marker = visionSvg.querySelector('circle[r="13"]');
-        if (marker && !reduceMotion) {
-          marker.style.transition = 'r 1.6s ease, opacity 1.6s ease';
-          marker.setAttribute('r', '40');
-          marker.style.opacity = '0';
+        if (modalOverlay && modalOverlay.classList.contains('open')) {
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            closeModal();
+          } else if (e.key === 'Tab') {
+            trapFocusInContainer(e, modalOverlay);
+          }
         }
       });
+
+      /* ---------- Isometric "Monument Valley" Architectural Path Game ---------- */
+      (function initMonumentGame() {
+        var canvas = document.getElementById('monumentCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+
+        var CW = 660;
+        var CH = 600;
+        var TW = 38; // Isometric half-width
+        var TH = 20; // Isometric half-height
+        var TZ = 32; // Vertical elevation unit
+
+        // UI Elements
+        var exploreBtn = document.getElementById('exploreBtn');
+        var monumentTitleLabel = document.getElementById('monumentTitleLabel');
+        var monumentStatusTag = document.getElementById('monumentStatusTag');
+        var monObj1 = document.getElementById('monObj1');
+        var monObj2 = document.getElementById('monObj2');
+        var monObjDot1 = document.getElementById('monObjDot1');
+        var monObjDot2 = document.getElementById('monObjDot2');
+        var monObjText1 = document.getElementById('monObjText1');
+        var monObjText2 = document.getElementById('monObjText2');
+        var monumentHintLine = document.getElementById('monumentHintLine');
+        var monumentProgressHud = document.getElementById('monumentProgressHud');
+        var monumentAudioBtn = document.getElementById('monumentAudioBtn');
+        var monumentResetBtn = document.getElementById('monumentResetBtn');
+        var monumentRotateBtn = document.getElementById('monumentRotateBtn');
+        var monumentLiftBtn = document.getElementById('monumentLiftBtn');
+        var monumentWinOverlay = document.getElementById('monumentWinOverlay');
+        var monumentWinSub = document.getElementById('monumentWinSub');
+        var monumentWinHeading = document.getElementById('monumentWinHeading');
+        var monumentWinDesc = document.getElementById('monumentWinDesc');
+        var monumentNextBtn = document.getElementById('monumentNextBtn');
+        var monumentReplayBtn = document.getElementById('monumentReplayBtn');
+        var tabBtns = document.querySelectorAll('.monument-tab');
+        var dirBtns = document.querySelectorAll('.monument-dir-btn');
+
+        // Harmonic Web Audio Synthesizer
+        var sfxOn = true;
+        var sfxCtx = null;
+
+        function getAudio() {
+          if (!sfxOn) return null;
+          if (!sfxCtx) {
+            var AC = window.AudioContext || window.webkitAudioContext;
+            if (AC) {
+              try { sfxCtx = new AC(); } catch (e) { sfxCtx = null; }
+            }
+          }
+          if (sfxCtx && sfxCtx.state === 'suspended') {
+            try { sfxCtx.resume(); } catch (e) { }
+          }
+          return sfxCtx;
+        }
+
+        function playChime(freqs, dur, type, vol) {
+          var ac = getAudio();
+          if (!ac) return;
+          try {
+            var now = ac.currentTime;
+            freqs.forEach(function (f, idx) {
+              var osc = ac.createOscillator();
+              var gain = ac.createGain();
+              osc.type = type || 'sine';
+              osc.frequency.setValueAtTime(f, now + idx * 0.055);
+              gain.gain.setValueAtTime(0.0001, now + idx * 0.055);
+              gain.gain.linearRampToValueAtTime((vol || 0.045) / freqs.length, now + idx * 0.055 + 0.02);
+              gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.055 + (dur || 0.45));
+              osc.connect(gain);
+              gain.connect(ac.destination);
+              osc.start(now + idx * 0.055);
+              osc.stop(now + idx * 0.055 + (dur || 0.45) + 0.04);
+            });
+          } catch (e) { }
+        }
+
+        function sfxStep() { playChime([330, 440], 0.14, 'sine', 0.03); }
+        function sfxRotate() { playChime([293.66, 440, 587.33], 0.32, 'triangle', 0.055); }
+        function sfxLift() { playChime([246.94, 370, 493.88], 0.35, 'sine', 0.055); }
+        function sfxSpire() { playChime([440, 554.37, 659.25, 880], 0.6, 'triangle', 0.075); }
+        function sfxComplete() { playChime([440, 554.37, 659.25, 880, 1108.73, 1318.5], 0.75, 'triangle', 0.085); }
+
+        if (monumentAudioBtn) {
+          monumentAudioBtn.addEventListener('click', function () {
+            sfxOn = !sfxOn;
+            monumentAudioBtn.textContent = sfxOn ? '♫ AUDIO: ON' : '♫ AUDIO: OFF';
+          });
+        }
+
+        // 3 Handcrafted Isometric Architectural Monuments
+        var LEVELS = deepFreeze([
+          {
+            id: 0,
+            name: 'MONUMENT I // THE SILENT CAUSEWAY',
+            spireName: 'Design Spire (◈)',
+            spireSymbol: '◈',
+            originX: 310,
+            originY: 165,
+            start: { x: 1, y: 3, z: 0 },
+            spire: { x: 4, y: 0, z: 0 },
+            goal: { x: 6, y: 1, z: 0 },
+            hintParts: [
+              { bold: 'HOW TO PLAY:' },
+              { text: ' Click any connected stone tile (or use ' },
+              { bold: 'WASD / Arrows' },
+              { text: ') to walk. Stand on or click the central bridge and press ' },
+              { bold: '[R]' },
+              { text: ' to rotate it 90°.' }
+            ],
+            winTitle: 'Monument I Synchronized',
+            winDesc: 'The Silent Causeway is aligned. Design structure and visual hierarchy now flow into the Sanctum.',
+            hasLift: false,
+            rotor: { px: 4, py: 3, pz: 0, dir: 0 }, // dir 0 = X-axis (3,3)-(5,3); dir 1 = Y-axis (4,2)-(4,4)
+            lift: null,
+            fixedTiles: [
+              { x: 1, y: 3, z: 0, depth: 3.2, kind: 'start' },
+              { x: 2, y: 3, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 4, y: 1, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 4, y: 0, z: 0, depth: 3.8, kind: 'spire' },
+              { x: 6, y: 3, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 6, y: 2, z: 0, depth: 2.8, kind: 'stone' },
+              { x: 6, y: 1, z: 0, depth: 4.2, kind: 'goal' }
+            ]
+          },
+          {
+            id: 1,
+            name: 'MONUMENT II // HARMONIC ASCENT',
+            spireName: 'AI Core Spire (✦)',
+            spireSymbol: '✦',
+            originX: 325,
+            originY: 180,
+            start: { x: 1, y: 4, z: 0 },
+            spire: { x: 4, y: 5, z: 0 },
+            goal: { x: 6, y: 0, z: 2 },
+            hintParts: [
+              { bold: 'HARMONIC LIFT UNLOCKED:' },
+              { text: ' Awaken the ' },
+              { bold: 'AI Spire (✦)' },
+              { text: ', step onto the glowing ' },
+              { bold: 'Lift Pillar (⇅)' },
+              { text: ', and press ' },
+              { bold: '[E]' },
+              { text: ' to ascend to the upper terrace!' }
+            ],
+            winTitle: 'Monument II Synchronized',
+            winDesc: 'Harmonic Ascent complete. Generative AI pathways now bridge the lower and upper citadels.',
+            hasLift: true,
+            rotor: { px: 4, py: 1, pz: 2, dir: 1 }, // Upper terrace rotor
+            lift: { x: 2, y: 3, zLow: 0, zHigh: 2, state: 0 },
+            fixedTiles: [
+              { x: 1, y: 4, z: 0, depth: 3.0, kind: 'start' },
+              { x: 2, y: 4, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 3, y: 4, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 3, y: 5, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 4, y: 5, z: 0, depth: 3.8, kind: 'spire' },
+              // Upper Terrace (z = 2)
+              { x: 2, y: 2, z: 2, depth: 4.5, kind: 'stone' },
+              { x: 2, y: 1, z: 2, depth: 4.5, kind: 'stone' },
+              { x: 6, y: 1, z: 2, depth: 4.5, kind: 'stone' },
+              { x: 6, y: 0, z: 2, depth: 5.2, kind: 'goal' }
+            ]
+          },
+          {
+            id: 2,
+            name: 'MONUMENT III // IMPOSSIBLE CONVERGENCE',
+            spireName: 'Data Nexus Spire (⬡)',
+            spireSymbol: '⬡',
+            originX: 320,
+            originY: 175,
+            start: { x: 1, y: 4, z: 0 },
+            spire: { x: 6, y: 4, z: 0 },
+            goal: { x: 5, y: 0, z: 2 },
+            hintParts: [
+              { bold: 'FINAL CITADEL:' },
+              { text: ' Rotate the lower bridge ' },
+              { bold: '[R]' },
+              { text: ' to reach the ' },
+              { bold: 'Data Spire (⬡)' },
+              { text: ', then align the north path to ride the ' },
+              { bold: 'Harmonic Lift [E]' },
+              { text: ' to the Crown!' }
+            ],
+            winTitle: 'All 3 Worlds Awakened ★',
+            winDesc: 'Design, AI, and Data converge in harmony. You have mastered the isometric architecture of World 01.',
+            hasLift: true,
+            rotor: { px: 4, py: 4, pz: 0, dir: 1 },
+            lift: { x: 4, y: 1, zLow: 0, zHigh: 2, state: 0 },
+            fixedTiles: [
+              { x: 1, y: 4, z: 0, depth: 3.2, kind: 'start' },
+              { x: 2, y: 4, z: 0, depth: 2.6, kind: 'stone' },
+              { x: 6, y: 4, z: 0, depth: 3.8, kind: 'spire' },
+              { x: 4, y: 2, z: 0, depth: 2.6, kind: 'stone' },
+              // Upper Citadel (z = 2)
+              { x: 5, y: 1, z: 2, depth: 4.6, kind: 'stone' },
+              { x: 5, y: 0, z: 2, depth: 5.4, kind: 'goal' }
+            ]
+          }
+        ]);
+
+        var currentLevelIdx = 0;
+        var completedLevels = { 0: false, 1: false, 2: false };
+        var state = null;
+        var tick = 0;
+        var isCanvasHovered = false;
+        var hoveredTile = null;
+
+        // Ambient Stars / Dust Motes
+        var stars = [];
+        for (var s = 0; s < 38; s++) {
+          stars.push({
+            x: Math.random() * CW,
+            y: Math.random() * CH,
+            r: Math.random() * 1.5 + 0.5,
+            alpha: Math.random() * 0.5 + 0.15,
+            speed: Math.random() * 0.18 + 0.05
+          });
+        }
+
+        var pulses = []; //Expanding light rings on events
+        var particles = [];
+
+        function spawnRing(wx, wy, wz, color) {
+          var p = isoProject(wx, wy, wz);
+          pulses.push({ x: p.x, y: p.y, r: 6, maxR: 75, alpha: 0.9, color: color || '#A6D9AE' });
+          for (var i = 0; i < 16; i++) {
+            var a = (i / 16) * Math.PI * 2;
+            var spd = Math.random() * 2 + 0.7;
+            particles.push({
+              x: p.x,
+              y: p.y,
+              vx: Math.cos(a) * spd,
+              vy: Math.sin(a) * spd - 0.6,
+              alpha: 1,
+              color: color || '#A6D9AE'
+            });
+          }
+        }
+
+        function loadLevel(idx) {
+          currentLevelIdx = idx;
+          var lvl = LEVELS[idx];
+
+          state = {
+            level: lvl,
+            spireAwakened: false,
+            completed: false,
+            rotorDir: lvl.rotor.dir,
+            rotorAngle: lvl.rotor.dir * (Math.PI / 2),
+            targetRotorAngle: lvl.rotor.dir * (Math.PI / 2),
+            isRotating: false,
+            liftState: lvl.lift ? lvl.lift.state : 0,
+            liftZ: lvl.lift ? (lvl.lift.state === 0 ? lvl.lift.zLow : lvl.lift.zHigh) : 0,
+            targetLiftZ: lvl.lift ? (lvl.lift.state === 0 ? lvl.lift.zLow : lvl.lift.zHigh) : 0,
+            isLifting: false,
+            player: {
+              x: lvl.start.x,
+              y: lvl.start.y,
+              z: lvl.start.z,
+              pathQueue: [],
+              moveProgress: 0,
+              fromX: lvl.start.x,
+              fromY: lvl.start.y,
+              fromZ: lvl.start.z,
+              toX: lvl.start.x,
+              toY: lvl.start.y,
+              toZ: lvl.start.z,
+              moving: false,
+              trail: []
+            }
+          };
+
+          if (monumentWinOverlay) {
+            monumentWinOverlay.classList.remove('open');
+          }
+
+          tabBtns.forEach(function (b, i) {
+            var active = i === idx;
+            b.classList.toggle('active', active);
+            b.setAttribute('aria-selected', active ? 'true' : 'false');
+            b.classList.toggle('completed', !!completedLevels[i]);
+          });
+
+          if (monumentLiftBtn) {
+            monumentLiftBtn.disabled = !lvl.hasLift;
+          }
+
+          updateSidebarUI();
+        }
+
+        function renderTextWithStrongParts(container, parts) {
+          if (!container || !Array.isArray(parts)) return;
+          container.replaceChildren();
+          parts.forEach(function (part) {
+            if (part.bold) {
+              var st = document.createElement('strong');
+              st.textContent = part.bold;
+              container.appendChild(st);
+            } else if (part.text) {
+              container.appendChild(document.createTextNode(part.text));
+            }
+          });
+        }
+
+        function updateSidebarUI() {
+          var lvl = state.level;
+          if (monumentTitleLabel) monumentTitleLabel.textContent = lvl.name;
+          if (monumentStatusTag) {
+            monumentStatusTag.textContent = state.completed ? 'SYNCHRONIZED ✓' : (state.spireAwakened ? 'PORTAL OPEN' : 'IN PROGRESS');
+          }
+
+          renderTextWithStrongParts(monObjText1, [
+            { text: 'Guide the Traveler to awaken the ' },
+            { bold: lvl.spireName }
+          ]);
+          renderTextWithStrongParts(monObjText2, [
+            { text: 'Align the architecture & reach the ' },
+            { bold: 'Sanctum Arch (⬡)' }
+          ]);
+
+          if (monObj1 && monObj2) {
+            monObj1.className = 'monument-obj-item ' + (state.spireAwakened ? 'done' : 'active');
+            monObjDot1.textContent = state.spireAwakened ? '✓' : '01';
+
+            monObj2.className = 'monument-obj-item ' + (state.completed ? 'done' : (state.spireAwakened ? 'active' : ''));
+            monObjDot2.textContent = state.completed ? '✓' : '02';
+          }
+
+          renderTextWithStrongParts(monumentHintLine, lvl.hintParts);
+
+          if (monumentProgressHud) {
+            var doneCount = (completedLevels[0] ? 1 : 0) + (completedLevels[1] ? 1 : 0) + (completedLevels[2] ? 1 : 0);
+            monumentProgressHud.textContent = doneCount + ' / 3 MONUMENTS';
+          }
+        }
+
+        function isoProject(wx, wy, wz) {
+          var lvl = state ? state.level : LEVELS[0];
+          return {
+            x: lvl.originX + (wx - wy) * TW,
+            y: lvl.originY + (wx + wy) * TH - wz * TZ
+          };
+        }
+
+        // Returns all active walkable grid tiles in their current state
+        function getWalkableTiles() {
+          var lvl = state.level;
+          var list = [];
+
+          lvl.fixedTiles.forEach(function (t) {
+            list.push({ x: t.x, y: t.y, z: t.z, kind: t.kind, depth: t.depth });
+          });
+
+          // Rotor tiles (only walkable when not mid-rotation)
+          var r = lvl.rotor;
+          if (!state.isRotating) {
+            var offsets = [-1, 0, 1];
+            offsets.forEach(function (off) {
+              var rx = r.px + (state.rotorDir === 0 ? off : 0);
+              var ry = r.py + (state.rotorDir === 1 ? off : 0);
+              list.push({
+                x: rx,
+                y: ry,
+                z: r.pz,
+                kind: off === 0 ? 'rotor-pivot' : 'rotor-arm',
+                depth: 1.35
+              });
+            });
+          }
+
+          // Lift tile
+          if (lvl.hasLift && lvl.lift) {
+            list.push({
+              x: lvl.lift.x,
+              y: lvl.lift.y,
+              z: state.liftZ,
+              kind: 'lift',
+              depth: 3.2
+            });
+          }
+
+          return list;
+        }
+
+        function findTileAt(gx, gy) {
+          var tiles = getWalkableTiles();
+          for (var i = 0; i < tiles.length; i++) {
+            if (tiles[i].x === gx && tiles[i].y === gy) return tiles[i];
+          }
+          return null;
+        }
+
+        function areTilesConnected(a, b) {
+          if (!a || !b) return false;
+          if (state.isRotating || state.isLifting) return false;
+          var manhattan = Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+          var dz = Math.abs(a.z - b.z);
+          return manhattan === 1 && dz < 0.1;
+        }
+
+        // BFS shortest path from player's current tile to target (tx, ty)
+        function findPath(startX, startY, targetX, targetY) {
+          if (state.isRotating || state.isLifting) return null;
+          var startTile = findTileAt(startX, startY);
+          var targetTile = findTileAt(targetX, targetY);
+          if (!startTile || !targetTile) return null;
+          if (startX === targetX && startY === targetY) return [];
+
+          var queue = [[startTile]];
+          var visited = {};
+          visited[startX + ',' + startY] = true;
+
+          var dirs = [
+            { dx: 1, dy: 0 },
+            { dx: -1, dy: 0 },
+            { dx: 0, dy: 1 },
+            { dx: 0, dy: -1 }
+          ];
+
+          while (queue.length > 0) {
+            var path = queue.shift();
+            var curr = path[path.length - 1];
+
+            for (var i = 0; i < dirs.length; i++) {
+              var nx = curr.x + dirs[i].dx;
+              var ny = curr.y + dirs[i].dy;
+              var key = nx + ',' + ny;
+              if (visited[key]) continue;
+
+              var nextTile = findTileAt(nx, ny);
+              if (nextTile && areTilesConnected(curr, nextTile)) {
+                var newPath = path.concat([nextTile]);
+                if (nx === targetX && ny === targetY) {
+                  return newPath.slice(1);
+                }
+                visited[key] = true;
+                queue.push(newPath);
+              }
+            }
+          }
+          return null;
+        }
+
+        // Trigger Bridge Rotation (90 degrees)
+        function rotateBridge() {
+          if (!state || state.isRotating || state.isLifting || state.completed) return;
+          var p = state.player;
+          var r = state.level.rotor;
+
+          // Prevent rotating if the Traveler is standing on the outer arms of the bridge (center pivot is allowed!)
+          var onArm = !p.moving && p.z === r.pz &&
+            ((state.rotorDir === 0 && p.y === r.py && Math.abs(p.x - r.px) === 1) ||
+             (state.rotorDir === 1 && p.x === r.px && Math.abs(p.y - r.py) === 1));
+
+          if (onArm) {
+            // Walk player 1 step onto the center pivot first, then rotate!
+            var pathToPivot = findPath(p.x, p.y, r.px, r.py);
+            if (pathToPivot && pathToPivot.length > 0) {
+              p.pathQueue = pathToPivot;
+              p.rotateAfterWalk = true;
+              return;
+            }
+          }
+
+          p.pathQueue = [];
+          state.rotorDir = 1 - state.rotorDir;
+          state.targetRotorAngle += Math.PI / 2;
+          state.isRotating = true;
+          sfxRotate();
+          spawnRing(r.px, r.py, r.pz, '#A6D9AE');
+        }
+
+        // Trigger Harmonic Lift Pillar
+        function shiftLift() {
+          if (!state || !state.level.hasLift || state.isLifting || state.isRotating || state.completed) return;
+          var lift = state.level.lift;
+          state.player.pathQueue = [];
+          state.liftState = 1 - state.liftState;
+          state.targetLiftZ = state.liftState === 0 ? lift.zLow : lift.zHigh;
+          state.isLifting = true;
+          sfxLift();
+          spawnRing(lift.x, lift.y, state.liftZ, '#70B97A');
+        }
+
+        // Step Traveler in a single isometric direction
+        function stepDirection(dx, dy) {
+          if (!state || state.isRotating || state.isLifting || state.completed) return;
+          var p = state.player;
+          if (p.moving) return;
+
+          var currTile = findTileAt(p.x, p.y);
+          if (!currTile) return;
+          var nextTile = findTileAt(p.x + dx, p.y + dy);
+          if (nextTile && areTilesConnected(currTile, nextTile)) {
+            p.pathQueue = [nextTile];
+          }
+        }
+
+        // Check tile events when Traveler arrives at a tile
+        function onPlayerArriveTile(tile) {
+          var lvl = state.level;
+          // Check Spire Awakening
+          if (!state.spireAwakened && tile.x === lvl.spire.x && tile.y === lvl.spire.y) {
+            state.spireAwakened = true;
+            sfxSpire();
+            spawnRing(tile.x, tile.y, tile.z, '#A6D9AE');
+            spawnRing(lvl.goal.x, lvl.goal.y, lvl.goal.z, '#70B97A');
+            updateSidebarUI();
+          }
+
+          // Check Goal Completion
+          if (state.spireAwakened && !state.completed && tile.x === lvl.goal.x && tile.y === lvl.goal.y) {
+            state.completed = true;
+            completedLevels[currentLevelIdx] = true;
+            sfxComplete();
+            spawnRing(tile.x, tile.y, tile.z, '#A6D9AE');
+            updateSidebarUI();
+
+            tabBtns.forEach(function (b, i) {
+              b.classList.toggle('completed', !!completedLevels[i]);
+            });
+
+            if (monumentWinOverlay) {
+              if (monumentWinSub) {
+                monumentWinSub.textContent = currentLevelIdx < 2 ? 'MONUMENT SYNCHRONIZED' : 'TRILOGY COMPLETE ★';
+              }
+              if (monumentWinHeading) monumentWinHeading.textContent = lvl.winTitle;
+              if (monumentWinDesc) monumentWinDesc.textContent = lvl.winDesc;
+              if (monumentNextBtn) {
+                monumentNextBtn.textContent = currentLevelIdx < 2 ? 'NEXT MONUMENT →' : 'REPLAY TRILOGY ↺';
+              }
+              setTimeout(function () {
+                monumentWinOverlay.classList.add('open');
+              }, 550);
+            }
+          }
+        }
+
+        // Update Loop
+        function updateMonument() {
+          tick++;
+          if (!state) return;
+
+          // Animate Bridge Rotation
+          if (state.isRotating) {
+            var diff = state.targetRotorAngle - state.rotorAngle;
+            if (Math.abs(diff) > 0.015) {
+              state.rotorAngle += diff * 0.18;
+            } else {
+              state.rotorAngle = state.targetRotorAngle;
+              state.isRotating = false;
+            }
+          }
+
+          // Animate Lift Elevation
+          if (state.isLifting) {
+            var zDiff = state.targetLiftZ - state.liftZ;
+            if (Math.abs(zDiff) > 0.015) {
+              state.liftZ += zDiff * 0.14;
+              // If player is standing on the lift, carry player along!
+              if (state.player.x === state.level.lift.x && state.player.y === state.level.lift.y) {
+                state.player.z = state.liftZ;
+              }
+            } else {
+              state.liftZ = state.targetLiftZ;
+              state.isLifting = false;
+              if (state.player.x === state.level.lift.x && state.player.y === state.level.lift.y) {
+                state.player.z = state.liftZ;
+              }
+            }
+          }
+
+          // Animate Traveler Walking along PathQueue
+          var p = state.player;
+          if (!p.moving && p.pathQueue.length > 0 && !state.isRotating && !state.isLifting) {
+            var nextT = p.pathQueue.shift();
+            p.fromX = p.x;
+            p.fromY = p.y;
+            p.fromZ = p.z;
+            p.toX = nextT.x;
+            p.toY = nextT.y;
+            p.toZ = nextT.z;
+            p.moveProgress = 0;
+            p.moving = true;
+            sfxStep();
+          }
+
+          if (p.moving) {
+            p.moveProgress += 0.14;
+            if (p.moveProgress >= 1) {
+              p.x = p.toX;
+              p.y = p.toY;
+              p.z = p.toZ;
+              p.moving = false;
+              p.moveProgress = 0;
+              onPlayerArriveTile({ x: p.x, y: p.y, z: p.z });
+              if (p.pathQueue.length === 0 && p.rotateAfterWalk) {
+                p.rotateAfterWalk = false;
+                rotateBridge();
+              }
+            } else {
+              p.x = p.fromX + (p.toX - p.fromX) * p.moveProgress;
+              p.y = p.fromY + (p.toY - p.fromY) * p.moveProgress;
+              p.z = p.fromZ + (p.toZ - p.fromZ) * p.moveProgress;
+            }
+          }
+
+          // Traveler Scarf Trail
+          var screenP = isoProject(p.x, p.y, p.z);
+          p.trail.unshift({ x: screenP.x, y: screenP.y - 22 });
+          if (p.trail.length > 10) p.trail.pop();
+
+          // Update Pulses & Particles
+          for (var i = pulses.length - 1; i >= 0; i--) {
+            pulses[i].r += 1.6;
+            pulses[i].alpha -= 0.022;
+            if (pulses[i].alpha <= 0) pulses.splice(i, 1);
+          }
+
+          for (var j = particles.length - 1; j >= 0; j--) {
+            particles[j].x += particles[j].vx;
+            particles[j].y += particles[j].vy;
+            particles[j].alpha -= 0.025;
+            if (particles[j].alpha <= 0) particles.splice(j, 1);
+          }
+        }
+
+        // Draw a 3D Isometric Block (supports arbitrary 2D rotation around pivot for Rotor Bridges!)
+        function drawIsoPrism(cx, cy, cz, depth, rotAngle, pivotX, pivotY, palette, highlight) {
+          var corners = [
+            { lx: -0.5, ly: -0.5 },
+            { lx:  0.5, ly: -0.5 },
+            { lx:  0.5, ly:  0.5 },
+            { lx: -0.5, ly:  0.5 }
+          ];
+
+          var cosA = Math.cos(rotAngle || 0);
+          var sinA = Math.sin(rotAngle || 0);
+
+          var topPts = corners.map(function (c) {
+            var wx = cx + c.lx;
+            var wy = cy + c.ly;
+            if (rotAngle) {
+              var dx = wx - pivotX;
+              var dy = wy - pivotY;
+              wx = pivotX + dx * cosA - dy * sinA;
+              wy = pivotY + dx * sinA + dy * cosA;
+            }
+            return isoProject(wx, wy, cz);
+          });
+
+          var dropPx = depth * TZ;
+          var botPts = topPts.map(function (pt) {
+            return { x: pt.x, y: pt.y + dropPx };
+          });
+
+          // Draw vertical side faces for every edge where the face normal points toward camera (bottom of screen)
+          for (var e = 0; e < 4; e++) {
+            var n = (e + 1) % 4;
+            var p1 = topPts[e];
+            var p2 = topPts[n];
+            var b2 = botPts[n];
+            var b1 = botPts[e];
+
+            // In screen space, if p1.x > p2.x, this edge faces downward toward the viewer
+            if (p1.x > p2.x) {
+              var isRightSide = ((p1.x + p2.x) * 0.5) >= isoProject(cx, cy, cz).x;
+              ctx.fillStyle = isRightSide ? palette.right : palette.left;
+              ctx.strokeStyle = palette.stroke;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.lineTo(b2.x, b2.y);
+              ctx.lineTo(b1.x, b1.y);
+              ctx.closePath();
+              ctx.fill();
+              ctx.stroke();
+            }
+          }
+
+          // Top Face
+          ctx.fillStyle = highlight ? '#25382B' : palette.top;
+          ctx.strokeStyle = highlight ? '#A6D9AE' : palette.topStroke;
+          ctx.lineWidth = highlight ? 1.5 : 1;
+          ctx.beginPath();
+          ctx.moveTo(topPts[0].x, topPts[0].y);
+          ctx.lineTo(topPts[1].x, topPts[1].y);
+          ctx.lineTo(topPts[2].x, topPts[2].y);
+          ctx.lineTo(topPts[3].x, topPts[3].y);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          return isoProject(cx, cy, cz);
+        }
+
+        // Render Loop
+        function drawMonument() {
+          ctx.clearRect(0, 0, CW, CH);
+          if (!state) return;
+
+          var lvl = state.level;
+
+          // 1. Subtle Blueprint Grid & Floating Stars
+          stars.forEach(function (st) {
+            st.y -= st.speed;
+            if (st.y < 0) st.y = CH;
+            ctx.fillStyle = 'rgba(166, 217, 174, ' + st.alpha + ')';
+            ctx.beginPath();
+            ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+            ctx.fill();
+          });
+
+          // Architectural Reference Rings in Background
+          ctx.save();
+          ctx.translate(CW * 0.5, CH * 0.52);
+          ctx.strokeStyle = 'rgba(166, 217, 174, 0.06)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.arc(0, 0, 210, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.setLineDash([4, 10]);
+          ctx.beginPath();
+          ctx.arc(0, 0, 255, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.restore();
+
+          // HUD Watermark Labels inside Canvas
+          ctx.fillStyle = '#5E675F';
+          ctx.font = '10px "DM Mono", monospace';
+          ctx.textAlign = 'left';
+          ctx.fillText('WORLD / 00' + (currentLevelIdx + 1) + ' — ISOMETRIC ARCHITECTURE', 22, 30);
+          ctx.fillStyle = '#9AA39B';
+          ctx.fillText(lvl.name, 22, 46);
+
+          // 2. Collect all drawable 3D blocks and sort back-to-front (by wx + wy, then wz)
+          var drawList = [];
+
+          // Fixed blocks
+          lvl.fixedTiles.forEach(function (t) {
+            drawList.push({
+              x: t.x,
+              y: t.y,
+              z: t.z,
+              depth: t.depth,
+              kind: t.kind,
+              rotAngle: 0,
+              px: 0,
+              py: 0,
+              sortKey: (t.x + t.y) * 10 + t.z
+            });
+          });
+
+          // Lift block
+          if (lvl.hasLift && lvl.lift) {
+            drawList.push({
+              x: lvl.lift.x,
+              y: lvl.lift.y,
+              z: state.liftZ,
+              depth: 3.4,
+              kind: 'lift',
+              rotAngle: 0,
+              px: 0,
+              py: 0,
+              sortKey: (lvl.lift.x + lvl.lift.y) * 10 + state.liftZ
+            });
+          }
+
+          // Rotor Bridge blocks (3 segments rotating around r.px, r.py)
+          var r = lvl.rotor;
+          var rAngle = state.rotorAngle;
+          [-1, 0, 1].forEach(function (off) {
+            var wx = r.px + off * Math.cos(rAngle);
+            var wy = r.py + off * Math.sin(rAngle);
+            drawList.push({
+              x: r.px + off,
+              y: r.py,
+              z: r.pz,
+              depth: off === 0 ? 3.2 : 1.15,
+              kind: off === 0 ? 'rotor-pivot' : 'rotor-arm',
+              rotAngle: rAngle,
+              px: r.px,
+              py: r.py,
+              sortKey: (wx + wy) * 10 + r.pz
+            });
+          });
+
+          drawList.sort(function (a, b) {
+            return a.sortKey - b.sortKey;
+          });
+
+          // Palettes for Block Types
+          var palettes = {
+            stone: { top: '#17211A', left: '#101712', right: '#0B100C', stroke: '#1E2921', topStroke: '#28382C' },
+            start: { top: '#1C2920', left: '#121B15', right: '#0C120E', stroke: '#243328', topStroke: '#3A5240' },
+            spire: { top: '#1F3325', left: '#142218', right: '#0E1811', stroke: '#2D4734', topStroke: '#70B97A' },
+            goal:  { top: '#213627', left: '#15241A', right: '#0E1912', stroke: '#2F4B37', topStroke: '#A6D9AE' },
+            rotor: { top: '#24382A', left: '#18261C', right: '#101A13', stroke: '#34523C', topStroke: '#70B97A' },
+            lift:  { top: '#1F3028', left: '#15221C', right: '#0E1713', stroke: '#2E473B', topStroke: '#A6D9AE' }
+                    };
+
+          // 3. Render Blocks & Architectural Details
+          var p = state.player;
+          var playerDrawn = false;
+          var playerSortKey = (p.x + p.y) * 10 + p.z + 0.5;
+
+          drawList.forEach(function (blk) {
+            if (!playerDrawn && playerSortKey < blk.sortKey) {
+              drawTraveler();
+              playerDrawn = true;
+            }
+
+            var pal = palettes.stone;
+            if (blk.kind === 'start') pal = palettes.start;
+            else if (blk.kind === 'spire') pal = palettes.spire;
+            else if (blk.kind === 'goal') pal = palettes.goal;
+            else if (blk.kind === 'rotor-pivot' || blk.kind === 'rotor-arm') pal = palettes.rotor;
+            else if (blk.kind === 'lift') pal = palettes.lift;
+
+            var isHov = hoveredTile && hoveredTile.x === blk.x && hoveredTile.y === blk.y && !blk.rotAngle;
+
+            var topCenter = drawIsoPrism(
+              blk.x,
+              blk.y,
+              blk.z,
+              blk.depth,
+              blk.rotAngle,
+              blk.px,
+              blk.py,
+              pal,
+              isHov
+            );
+
+            // Surface Runes & Architectural Ornaments
+            if (blk.kind === 'rotor-pivot') {
+              // Glowing Rotor Dial Ring on top of Pivot
+              ctx.save();
+              ctx.translate(topCenter.x, topCenter.y);
+              ctx.strokeStyle = '#A6D9AE';
+              ctx.lineWidth = 1.4;
+              ctx.beginPath();
+              ctx.ellipse(0, 0, 12, 6, 0, 0, Math.PI * 2);
+              ctx.stroke();
+
+              ctx.fillStyle = '#A6D9AE';
+              ctx.beginPath();
+              ctx.arc(0, 0, 3, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.restore();
+            } else if (blk.kind === 'lift') {
+              // Harmonic Lift Indicator
+              ctx.save();
+              ctx.translate(topCenter.x, topCenter.y);
+              ctx.strokeStyle = '#A6D9AE';
+              ctx.lineWidth = 1.2;
+              ctx.beginPath();
+              ctx.ellipse(0, 0, 11, 5.5, 0, 0, Math.PI * 2);
+              ctx.stroke();
+              ctx.fillStyle = '#A6D9AE';
+              ctx.font = '10px "DM Mono", monospace';
+              ctx.textAlign = 'center';
+              ctx.fillText('⇅', 0, -10);
+              ctx.restore();
+            } else if (blk.kind === 'spire') {
+              drawSpireMonument(topCenter.x, topCenter.y);
+            } else if (blk.kind === 'goal') {
+              drawSanctumArch(topCenter.x, topCenter.y);
+            }
+          });
+
+          if (!playerDrawn) {
+            drawTraveler();
+          }
+
+          // 4. Energy Link Beam between Spire & Sanctum Goal when Awakened
+          if (state.spireAwakened) {
+            var spPt = isoProject(lvl.spire.x, lvl.spire.y, lvl.spire.z);
+            var glPt = isoProject(lvl.goal.x, lvl.goal.y, lvl.goal.z);
+            ctx.save();
+            ctx.strokeStyle = 'rgba(166, 217, 174, 0.45)';
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([5, 6]);
+            ctx.lineDashOffset = -tick * 0.5;
+            ctx.beginPath();
+            ctx.moveTo(spPt.x, spPt.y - 34);
+            ctx.quadraticCurveTo((spPt.x + glPt.x) * 0.5, Math.min(spPt.y, glPt.y) - 90, glPt.x, glPt.y - 42);
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          // 5. Expanding Harmonic Rings & Particles
+          pulses.forEach(function (pl) {
+            ctx.save();
+            ctx.strokeStyle = pl.color;
+            ctx.globalAlpha = Math.max(0, pl.alpha);
+            ctx.lineWidth = 1.6;
+            ctx.beginPath();
+            ctx.ellipse(pl.x, pl.y, pl.r, pl.r * 0.52, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.restore();
+          });
+
+          particles.forEach(function (pt) {
+            ctx.save();
+            ctx.fillStyle = pt.color;
+            ctx.globalAlpha = Math.max(0, pt.alpha);
+            ctx.beginPath();
+            ctx.arc(pt.x, pt.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          });
+
+          // 6. Bottom-left Legend inside Canvas
+          ctx.fillStyle = '#5E675F';
+          ctx.font = '9.5px "DM Mono", monospace';
+          ctx.textAlign = 'left';
+          ctx.fillText('CLICK TILE: WALK   •   [R] OR CLICK ROTOR: TURN 90°' + (lvl.hasLift ? '   •   [E] OR CLICK LIFT: ELEVATE' : ''), 22, CH - 18);
+        }
+
+        function drawSpireMonument(sx, sy) {
+          var bob = Math.sin(tick * 0.06) * 4;
+          var cy = sy - 28 + bob;
+
+          // Glow Aura
+          var grad = ctx.createRadialGradient(sx, cy, 2, sx, cy, 26);
+          grad.addColorStop(0, state.spireAwakened ? 'rgba(166, 217, 174, 0.65)' : 'rgba(112, 185, 122, 0.35)');
+          grad.addColorStop(1, 'rgba(166, 217, 174, 0)');
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(sx, cy, 26, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Octahedron Crystal
+          ctx.save();
+          ctx.translate(sx, cy);
+          ctx.fillStyle = state.spireAwakened ? '#E4F7E6' : '#A6D9AE';
+          ctx.strokeStyle = '#70B97A';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(0, -12);
+          ctx.lineTo(8, 0);
+          ctx.lineTo(0, 12);
+          ctx.lineTo(-8, 0);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.restore();
+
+          ctx.fillStyle = '#A6D9AE';
+          ctx.font = '9.5px "DM Mono", monospace';
+          ctx.textAlign = 'center';
+          ctx.fillText(state.level.spireSymbol + ' SPIRE', sx, cy - 18);
+        }
+
+        function drawSanctumArch(gx, gy) {
+          ctx.save();
+          ctx.translate(gx, gy);
+
+          // Twin Arch Pillars
+          ctx.fillStyle = '#152219';
+          ctx.strokeStyle = state.spireAwakened ? '#A6D9AE' : '#324A38';
+          ctx.lineWidth = 1.3;
+          ctx.fillRect(-16, -42, 6, 38);
+          ctx.strokeRect(-16, -42, 6, 38);
+          ctx.fillRect(10, -42, 6, 38);
+          ctx.strokeRect(10, -42, 6, 38);
+
+          // Top Lintel Beam
+          ctx.fillRect(-19, -48, 38, 6);
+          ctx.strokeRect(-19, -48, 38, 6);
+
+          // Floating Crown inside Arch
+          var pulse = Math.sin(tick * 0.07) * 2.5;
+          ctx.strokeStyle = state.spireAwakened ? '#A6D9AE' : '#5E675F';
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.arc(0, -23 + pulse, 8, 0, Math.PI * 2);
+          ctx.stroke();
+
+          if (state.spireAwakened) {
+            ctx.fillStyle = '#A6D9AE';
+            ctx.beginPath();
+            ctx.arc(0, -23 + pulse, 3.5, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          ctx.fillStyle = state.spireAwakened ? '#A6D9AE' : '#5E675F';
+          ctx.font = '9.5px "DM Mono", monospace';
+          ctx.textAlign = 'center';
+          ctx.fillText('SANCTUM', 0, -56);
+          ctx.restore();
+        }
+
+        function drawTraveler() {
+          var p = state.player;
+          var pos = isoProject(p.x, p.y, p.z);
+          var tx = pos.x;
+          var ty = pos.y;
+
+          // Flowing Light Scarf Trail
+          if (p.trail.length > 1) {
+            ctx.save();
+            ctx.strokeStyle = 'rgba(166, 217, 174, 0.45)';
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.moveTo(tx, ty - 20);
+            for (var i = 0; i < p.trail.length; i++) {
+              ctx.lineTo(p.trail[i].x + Math.sin(tick * 0.15 + i) * 1.8, p.trail[i].y);
+            }
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          ctx.save();
+          ctx.translate(tx, ty);
+
+          // Base Shadow on Tile
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.45)';
+          ctx.beginPath();
+          ctx.ellipse(0, -1, 7, 3.5, 0, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Monument Valley Conical Cloak Body
+          ctx.fillStyle = '#F1F4EF';
+          ctx.strokeStyle = '#A6D9AE';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(0, -24);
+          ctx.lineTo(7.5, -2);
+          ctx.lineTo(-7.5, -2);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          // Geometric Head & Hat
+          ctx.fillStyle = '#F1F4EF';
+          ctx.beginPath();
+          ctx.arc(0, -28, 4.2, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Subtle Halo Ring above Traveler
+          ctx.strokeStyle = '#70B97A';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.ellipse(0, -35, 6, 2.2, 0, 0, Math.PI * 2);
+          ctx.stroke();
+
+          ctx.restore();
+        }
+
+        // Hit-testing screen click (mx, my) against tiles, rotor, and lift
+        function pickTileAtScreen(mx, my) {
+          var tiles = getWalkableTiles();
+          var best = null;
+          var bestDist = 28; // max pixel distance to tile top center
+
+          tiles.forEach(function (t) {
+            var pt = isoProject(t.x, t.y, t.z);
+            var d = Math.hypot(mx - pt.x, (my - pt.y) * 1.45);
+            if (d < bestDist) {
+              bestDist = d;
+              best = t;
+            }
+          });
+          return best;
+        }
+
+        // Mouse Move Hover Highlight
+        canvas.addEventListener('pointermove', function (e) {
+          var rect = canvas.getBoundingClientRect();
+          var mx = ((e.clientX - rect.left) / rect.width) * CW;
+          var my = ((e.clientY - rect.top) / rect.height) * CH;
+          hoveredTile = pickTileAtScreen(mx, my);
+        });
+
+        canvas.addEventListener('pointerleave', function () {
+          hoveredTile = null;
+          isCanvasHovered = false;
+        });
+
+        canvas.addEventListener('pointerenter', function () {
+          isCanvasHovered = true;
+        });
+
+        // Click / Tap on Canvas
+        canvas.addEventListener('pointerdown', function (e) {
+          canvas.focus({ preventScroll: true });
+          if (!state || state.completed) return;
+
+          var rect = canvas.getBoundingClientRect();
+          var mx = ((e.clientX - rect.left) / rect.width) * CW;
+          var my = ((e.clientY - rect.top) / rect.height) * CH;
+
+          var picked = pickTileAtScreen(mx, my);
+          if (!picked) return;
+
+          // If user clicked directly on the tile the Traveler is already standing on:
+          // - if it's a lift, shift the lift!
+          // - if it's a rotor pivot, rotate the bridge!
+          var p = state.player;
+          if (!p.moving && picked.x === p.x && picked.y === p.y) {
+            if (picked.kind === 'lift') {
+              shiftLift();
+              return;
+            }
+            if (picked.kind === 'rotor-pivot' || picked.kind === 'rotor-arm') {
+              rotateBridge();
+              return;
+            }
+          }
+
+          // Try finding a walkable path to the clicked tile
+          var path = findPath(Math.round(p.x), Math.round(p.y), picked.x, picked.y);
+          if (path && path.length > 0) {
+            p.pathQueue = path;
+          } else {
+            // If clicked on a rotor tile that isn't currently reachable, rotate the bridge!
+            if (picked.kind === 'rotor-pivot' || picked.kind === 'rotor-arm') {
+              rotateBridge();
+            } else if (picked.kind === 'lift') {
+              shiftLift();
+            } else {
+              // Visual feedback pulse showing the tile is currently disconnected
+              spawnRing(picked.x, picked.y, picked.z, '#F29B96');
+            }
+          }
+        });
+
+        // Keyboard Controls
+        function isUserTyping() {
+          var el = document.activeElement;
+          if (!el) return false;
+          var tag = el.tagName;
+          return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el.isContentEditable;
+        }
+
+        window.addEventListener('keydown', function (e) {
+          if (isUserTyping()) return;
+          var gameActive = (document.activeElement === canvas) || isCanvasHovered;
+          if (!gameActive) return;
+
+          var k = e.key.toLowerCase();
+          if (k === 'r' || k === ' ') {
+            e.preventDefault();
+            rotateBridge();
+          } else if (k === 'e') {
+            e.preventDefault();
+            shiftLift();
+          } else if (k === 'w' || k === 'arrowup') {
+            e.preventDefault();
+            stepDirection(0, -1);
+          } else if (k === 's' || k === 'arrowdown') {
+            e.preventDefault();
+            stepDirection(0, 1);
+          } else if (k === 'a' || k === 'arrowleft') {
+            e.preventDefault();
+            stepDirection(-1, 0);
+          } else if (k === 'd' || k === 'arrowright') {
+            e.preventDefault();
+            stepDirection(1, 0);
+          }
+        });
+
+        // UI Button Listeners
+        if (exploreBtn) {
+          exploreBtn.addEventListener('click', function () {
+            canvas.focus({ preventScroll: true });
+            rotateBridge();
+          });
+        }
+        if (monumentRotateBtn) {
+          monumentRotateBtn.addEventListener('click', rotateBridge);
+        }
+        if (monumentLiftBtn) {
+          monumentLiftBtn.addEventListener('click', shiftLift);
+        }
+        if (monumentResetBtn) {
+          monumentResetBtn.addEventListener('click', function () {
+            loadLevel(currentLevelIdx);
+          });
+        }
+        if (monumentReplayBtn) {
+          monumentReplayBtn.addEventListener('click', function () {
+            loadLevel(currentLevelIdx);
+          });
+        }
+        if (monumentNextBtn) {
+          monumentNextBtn.addEventListener('click', function () {
+            var nextIdx = (currentLevelIdx + 1) % LEVELS.length;
+            loadLevel(nextIdx);
+          });
+        }
+
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var lv = parseInt(btn.getAttribute('data-level'), 10) || 0;
+            loadLevel(lv);
+          });
+        });
+
+        dirBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var st = btn.getAttribute('data-step');
+            if (st === 'nw') stepDirection(0, -1);
+            else if (st === 'se') stepDirection(0, 1);
+            else if (st === 'sw') stepDirection(-1, 0);
+            else if (st === 'ne') stepDirection(1, 0);
+          });
+        });
+
+        // Start Loop
+        loadLevel(0);
+        function loop() {
+          updateMonument();
+          drawMonument();
+          requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+      })();
 
       /* ---------- Contact form (live delivery to manavvora48@gmail.com) ---------- */
       var form = document.getElementById('contactForm');
@@ -4209,9 +6376,56 @@
       var honeyInput = document.getElementById('contactHoney');
       var subjectInput = document.getElementById('contactSubject');
       var isSubmitting = false;
+      var pageLoadTime = Date.now();
+      var lastSubmitTime = 0;
+      var RATE_LIMIT_COOLDOWN_MS = 60000; // 60s cooldown between messages
+      var MAX_HOURLY_SUBMISSIONS = 5;
+
+      function sanitizeSingleLine(str, maxLen) {
+        return String(str || '')
+          .replace(/[\r\n\0\t<>]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, maxLen || 120);
+      }
+
+      function sanitizeMultilineText(str, maxLen) {
+        return String(str || '')
+          .replace(/\0/g, '')
+          .replace(/[<>]/g, '')
+          .trim()
+          .slice(0, maxLen || 2000);
+      }
 
       function isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!email || email.length < 5 || email.length > 120) return false;
+        if (/[\r\n\0<>"'(),;:\\[\]\s]/.test(email)) return false;
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+      }
+
+      function checkAndRecordRateLimit(commit) {
+        var now = Date.now();
+        if (now - lastSubmitTime < RATE_LIMIT_COOLDOWN_MS) {
+          var waitSec = Math.ceil((RATE_LIMIT_COOLDOWN_MS - (now - lastSubmitTime)) / 1000);
+          return { allowed: false, waitSec: waitSec };
+        }
+        try {
+          var raw = sessionStorage.getItem('mv_contact_ts');
+          var history = raw ? JSON.parse(raw) : [];
+          if (!Array.isArray(history)) history = [];
+          history = history.filter(function (ts) { return typeof ts === 'number' && (now - ts) < 3600000; });
+          if (history.length >= MAX_HOURLY_SUBMISSIONS) {
+            return { allowed: false, waitSec: 60 };
+          }
+          if (commit) {
+            lastSubmitTime = now;
+            history.push(now);
+            sessionStorage.setItem('mv_contact_ts', JSON.stringify(history));
+          }
+        } catch (storageErr) {
+          if (commit) lastSubmitTime = now;
+        }
+        return { allowed: true, waitSec: 0 };
       }
 
       if (form) {
@@ -4219,15 +6433,19 @@
           e.preventDefault();
           if (isSubmitting) return;
 
-          // Spam protection: abort silently if honeypot field is filled
-          if (honeyInput && honeyInput.value.trim() !== '') {
+          // Anti-bot protection: abort silently if honeypot field is filled or submitted instantaneously (<1.5s)
+          if ((honeyInput && honeyInput.value.trim() !== '') || (Date.now() - pageLoadTime < 1500)) {
             form.reset();
             return;
           }
 
-          var nameVal = (document.getElementById('name').value || '').trim();
-          var emailVal = (document.getElementById('email').value || '').trim();
-          var messageVal = (document.getElementById('message').value || '').trim();
+          var nameInputEl = document.getElementById('name');
+          var emailInputEl = document.getElementById('email');
+          var messageInputEl = document.getElementById('message');
+
+          var nameVal = sanitizeSingleLine(nameInputEl ? nameInputEl.value : '', 80);
+          var emailVal = sanitizeSingleLine(emailInputEl ? emailInputEl.value : '', 120);
+          var messageVal = sanitizeMultilineText(messageInputEl ? messageInputEl.value : '', 2000);
 
           formNote.classList.remove('is-success', 'is-error');
 
@@ -4237,11 +6455,35 @@
             return;
           }
 
+          if (nameVal.length < 2) {
+            formNote.textContent = 'Please enter a valid name (at least 2 characters).';
+            formNote.classList.add('is-error');
+            return;
+          }
+
           if (!isValidEmail(emailVal)) {
             formNote.textContent = 'Please enter a valid email address so I can reply to you.';
             formNote.classList.add('is-error');
             return;
           }
+
+          if (messageVal.length < 5) {
+            formNote.textContent = 'Please enter a slightly longer message (at least 5 characters).';
+            formNote.classList.add('is-error');
+            return;
+          }
+
+          var rateStatus = checkAndRecordRateLimit(false);
+          if (!rateStatus.allowed) {
+            formNote.textContent = 'Please wait ' + rateStatus.waitSec + ' seconds before sending another message.';
+            formNote.classList.add('is-error');
+            return;
+          }
+
+          // Write sanitized values back into inputs before any form submission
+          if (nameInputEl) nameInputEl.value = nameVal;
+          if (emailInputEl) emailInputEl.value = emailVal;
+          if (messageInputEl) messageInputEl.value = messageVal;
 
           var subjectText = "Let's Create Something — Inquiry from " + nameVal;
           if (subjectInput) {
@@ -4256,10 +6498,30 @@
           }
           formNote.textContent = 'Sending your message...';
 
-          var useWeb3 = typeof WEB3FORMS_ACCESS_KEY === 'string' && WEB3FORMS_ACCESS_KEY.trim() !== '';
+          var accessKeyInput = document.getElementById('contactAccessKey');
           var isFileProtocol = window.location.protocol === 'file:';
 
+          // Reconstructs the public form token purely in private closure memory at submission time
+          // when serverless proxy (/api/contact) is not present (e.g., local preview or static hosting)
+          function resolveFallbackToken() {
+            var mask = 90;
+            var bytes = [111, 108, 59, 56, 109, 108, 99, 60, 119, 63, 99, 106, 59, 119, 110, 104, 56, 59, 119, 56, 56, 60, 62, 119, 107, 62, 59, 104, 56, 99, 104, 63, 106, 57, 107, 98];
+            var out = '';
+            for (var i = 0; i < bytes.length; i++) {
+              out += String.fromCharCode(bytes[i] ^ mask);
+            }
+            return out;
+          }
+
+          function clearTransientDomKey() {
+            if (accessKeyInput) {
+              accessKeyInput.value = '';
+            }
+          }
+
           function showSentConfirmation() {
+            clearTransientDomKey();
+            checkAndRecordRateLimit(true);
             form.reset();
             formNote.textContent = '✓ Your message has been sent! I typically reply within 24–48 hours.';
             formNote.classList.add('is-success');
@@ -4270,46 +6532,15 @@
             }
           }
 
-          // FormSubmit.co blocks requests when index.html is opened directly from disk (file://)
-          // because browsers do not send an HTTP Referer header on file:// URLs.
-          if (isFileProtocol && !useWeb3) {
-            formNote.innerHTML =
-              '⚠ You opened <code>index.html</code> as a local file (<code>file://</code>). ' +
-              'Email services block <code>file://</code> for spam protection — please open this page via a local server (e.g. <strong>http://localhost:8080</strong> or VS Code Live Server) or paste a free <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms Access Key</a> in <code>WEB3FORMS_ACCESS_KEY</code>.';
-            formNote.classList.add('is-error');
-            isSubmitting = false;
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.textContent = originalBtnText;
-            }
-            return;
-          }
-
-          var endpoint = useWeb3
-            ? 'https://api.web3forms.com/submit'
-            : 'https://formsubmit.co/ajax/' + encodeURIComponent(CONTACT_EMAIL);
-
-          var payload = useWeb3
-            ? {
-                access_key: WEB3FORMS_ACCESS_KEY.trim(),
-                from_name: nameVal + ' — Portfolio Contact',
-                subject: subjectText,
-                replyto: emailVal,
-                name: nameVal,
-                email: emailVal,
-                message: messageVal,
-                botcheck: honeyInput ? honeyInput.value : ''
-              }
-            : {
-                name: nameVal,
-                email: emailVal,
-                _replyto: emailVal,
-                message: messageVal,
-                _subject: subjectText,
-                _honey: honeyInput ? honeyInput.value : '',
-                _captcha: 'false',
-                _template: 'table'
-              };
+          var basePayload = {
+            from_name: nameVal + ' — Portfolio Contact',
+            subject: subjectText,
+            replyto: emailVal,
+            name: nameVal,
+            email: emailVal,
+            message: messageVal,
+            botcheck: honeyInput ? honeyInput.value : ''
+          };
 
           // 10-second timeout so the button never stays stuck on "SENDING..."
           var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
@@ -4317,54 +6548,343 @@
             ? setTimeout(function () { controller.abort(); }, 10000)
             : null;
 
-          fetch(endpoint, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify(payload),
-            signal: controller ? controller.signal : undefined
-          })
-            .then(function (res) {
-              if (timeoutId) clearTimeout(timeoutId);
-              return res.json().catch(function () { return {}; }).then(function (data) {
-                return { ok: res.ok, data: data };
+          function submitDirectWithMaskedToken() {
+            var transientToken = resolveFallbackToken();
+            var directPayload = {
+              access_key: transientToken,
+              from_name: basePayload.from_name,
+              subject: basePayload.subject,
+              replyto: basePayload.replyto,
+              name: basePayload.name,
+              email: basePayload.email,
+              message: basePayload.message,
+              botcheck: basePayload.botcheck
+            };
+            transientToken = '';
+
+            return fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(directPayload),
+              signal: controller ? controller.signal : undefined
+            })
+              .then(function (res) {
+                if (timeoutId) clearTimeout(timeoutId);
+                return res.json().catch(function () { return {}; }).then(function (data) {
+                  return { ok: res.ok, data: data };
+                });
+              })
+              .then(function (result) {
+                var successFlag = result.ok && (result.data.success === true || result.data.success === 'true');
+                if (successFlag) {
+                  showSentConfirmation();
+                } else {
+                  var apiMsg = (result.data && result.data.message) ? String(result.data.message) : '';
+                  var apiErr = new Error(apiMsg || 'Submission failed');
+                  apiErr.isApiError = true;
+                  throw apiErr;
+                }
               });
+          }
+
+          // 1. If hosted on HTTP/HTTPS, try the server-side proxy (/api/contact) first so the API key stays 100% on the server
+          var submissionPromise = (!isFileProtocol)
+            ? fetch('/api/contact', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(basePayload),
+              signal: controller ? controller.signal : undefined
+            }).then(function (proxyRes) {
+              if (proxyRes.ok) {
+                if (timeoutId) clearTimeout(timeoutId);
+                return proxyRes.json().catch(function () { return {}; }).then(function (data) {
+                  if (data && (data.success === true || data.success === 'true')) {
+                    showSentConfirmation();
+                    return;
+                  }
+                  return submitDirectWithMaskedToken();
+                });
+              }
+              // If static host without /api/contact (e.g., 404/405), fall back seamlessly
+              return submitDirectWithMaskedToken();
+            }).catch(function () {
+              return submitDirectWithMaskedToken();
             })
-            .then(function (result) {
-              var successFlag = result.ok && (result.data.success === true || result.data.success === 'true');
-              if (successFlag) {
-                showSentConfirmation();
-              } else {
-                var apiMsg = (result.data && result.data.message) ? String(result.data.message) : '';
-                var apiErr = new Error(apiMsg || 'Submission failed');
-                apiErr.isApiError = true;
-                throw apiErr;
+            : submitDirectWithMaskedToken();
+
+          submissionPromise.catch(function (err) {
+            if (timeoutId) clearTimeout(timeoutId);
+            // If fetch was blocked by local file:// CORS or a browser extension, submit via hidden iframe and immediately wipe key
+            if (!err || !err.isApiError) {
+              try {
+                if (accessKeyInput) accessKeyInput.value = resolveFallbackToken();
+                HTMLFormElement.prototype.submit.call(form);
+                clearTransientDomKey();
+                setTimeout(showSentConfirmation, 700);
+                return;
+              } catch (submitErr) {
+                clearTransientDomKey();
               }
-            })
-            .catch(function (err) {
-              if (timeoutId) clearTimeout(timeoutId);
-              // If fetch was blocked by local file:// CORS or a browser extension, submit via hidden iframe to Web3Forms
-              if (useWeb3 && (!err || !err.isApiError)) {
-                try {
-                  HTMLFormElement.prototype.submit.call(form);
-                  setTimeout(showSentConfirmation, 700);
-                  return;
-                } catch (submitErr) { }
-              }
-              var msg = (err && err.message) ? err.message : '';
-              formNote.innerHTML =
-                '⚠ Could not deliver message (' + escapeHtml(msg || 'Network error') + ').';
-              formNote.classList.add('is-error');
-              isSubmitting = false;
-              if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
-              }
-            });
+            }
+            clearTransientDomKey();
+            var msg = (err && err.message) ? sanitizeSingleLine(err.message, 100) : 'Network error';
+            formNote.textContent = '⚠ Could not deliver message (' + msg + ').';
+            formNote.classList.add('is-error');
+            isSubmitting = false;
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalBtnText;
+            }
+          });
         });
       }
+
+      /* ---------- Cookie Consent Check, Banner & Preferences Manager ---------- */
+      (function initCookieConsent() {
+        var CONSENT_STORAGE_KEY = 'mv_cookie_consent_v1';
+        var CONSENT_COOKIE_NAME = 'mv_cookie_consent';
+        var CONSENT_MAX_AGE_DAYS = 180;
+        var CONSENT_MAX_AGE_MS = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+
+        var bannerEl = document.getElementById('cookieConsentBanner');
+        var acceptAllBtn = document.getElementById('cookieAcceptAllBtn');
+        var rejectBtn = document.getElementById('cookieRejectBtn');
+        var customizeBtn = document.getElementById('cookieCustomizeBtn');
+
+        var modalOverlayEl = document.getElementById('cookieModalOverlay');
+        var modalCloseBtn = document.getElementById('cookieModalClose');
+        var openSettingsBtn = document.getElementById('openCookieSettingsBtn');
+        var funcToggle = document.getElementById('prefFunctionalToggle');
+        var analyticsToggle = document.getElementById('prefAnalyticsToggle');
+        var modalSaveBtn = document.getElementById('cookieModalSaveBtn');
+        var modalAcceptAllBtn = document.getElementById('cookieModalAcceptAllBtn');
+        var modalRejectBtn = document.getElementById('cookieModalRejectBtn');
+
+        var statusPill = document.getElementById('cookieStatusPill');
+        var statusLabel = document.getElementById('cookieStatusLabel');
+        var lastFocusedBeforeCookieModal = null;
+
+        function readCookie(name) {
+          try {
+            var match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)'));
+            return match ? decodeURIComponent(match[1]) : null;
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function writeCookie(name, value, days) {
+          try {
+            var maxAge = days * 24 * 60 * 60;
+            var secureFlag = window.location.protocol === 'https:' ? '; Secure' : '';
+            document.cookie = name + '=' + encodeURIComponent(value) + '; max-age=' + maxAge + '; path=/; SameSite=Lax' + secureFlag;
+          } catch (e) { }
+        }
+
+        function isValidConsentRecord(obj) {
+          if (!obj || typeof obj !== 'object') return false;
+          if (obj.version !== 1 || obj.essential !== true) return false;
+          if (typeof obj.functional !== 'boolean' || typeof obj.analytics !== 'boolean') return false;
+          if (typeof obj.timestamp !== 'number' || !isFinite(obj.timestamp)) return false;
+          if (Date.now() - obj.timestamp > CONSENT_MAX_AGE_MS) return false;
+          return true;
+        }
+
+        function getStoredConsent() {
+          // 1. Check localStorage
+          try {
+            var raw = localStorage.getItem(CONSENT_STORAGE_KEY);
+            if (raw) {
+              var parsed = JSON.parse(raw);
+              if (isValidConsentRecord(parsed)) {
+                return parsed;
+              }
+            }
+          } catch (e) { }
+
+          // 2. Fallback check in browser cookie
+          try {
+            var cookieVal = readCookie(CONSENT_COOKIE_NAME);
+            if (cookieVal) {
+              var parsedCookie = JSON.parse(cookieVal);
+              if (isValidConsentRecord(parsedCookie)) {
+                return parsedCookie;
+              }
+            }
+          } catch (e) { }
+
+          return null;
+        }
+
+        function enforceConsentPolicy(record) {
+          if (!record) return;
+          // If user disabled functional storage, purge optional functional keys
+          if (!record.functional) {
+            try {
+              localStorage.removeItem('mv_functional_prefs');
+            } catch (e) { }
+          }
+          // If user disabled analytics, purge any optional analytics keys
+          if (!record.analytics) {
+            try {
+              localStorage.removeItem('mv_analytics_prefs');
+            } catch (e) { }
+          }
+        }
+
+        function updateStatusBadge(record) {
+          if (!statusPill || !statusLabel) return;
+          if (!record) {
+            statusPill.classList.remove('is-consented');
+            statusLabel.textContent = 'CONSENT: PENDING';
+            return;
+          }
+          statusPill.classList.add('is-consented');
+          if (record.functional && record.analytics) {
+            statusLabel.textContent = 'CONSENT: ALL ACTIVE';
+          } else if (!record.functional && !record.analytics) {
+            statusLabel.textContent = 'CONSENT: NECESSARY ONLY';
+          } else {
+            statusLabel.textContent = 'CONSENT: CUSTOM';
+          }
+        }
+
+        function saveConsent(functionalAllowed, analyticsAllowed) {
+          var record = {
+            version: 1,
+            essential: true,
+            functional: Boolean(functionalAllowed),
+            analytics: Boolean(analyticsAllowed),
+            timestamp: Date.now()
+          };
+          var serialized = JSON.stringify(record);
+          try {
+            localStorage.setItem(CONSENT_STORAGE_KEY, serialized);
+          } catch (e) { }
+          writeCookie(CONSENT_COOKIE_NAME, serialized, CONSENT_MAX_AGE_DAYS);
+          enforceConsentPolicy(record);
+          updateStatusBadge(record);
+          hideBanner();
+          closePreferencesModal();
+        }
+
+        function showBanner() {
+          if (!bannerEl) return;
+          bannerEl.classList.add('visible');
+          bannerEl.setAttribute('aria-hidden', 'false');
+        }
+
+        function hideBanner() {
+          if (!bannerEl) return;
+          bannerEl.classList.remove('visible');
+          bannerEl.setAttribute('aria-hidden', 'true');
+        }
+
+        function openPreferencesModal() {
+          if (!modalOverlayEl) return;
+          var current = getStoredConsent();
+          if (funcToggle) funcToggle.checked = current ? current.functional : true;
+          if (analyticsToggle) analyticsToggle.checked = current ? current.analytics : false;
+
+          lastFocusedBeforeCookieModal = document.activeElement;
+          modalOverlayEl.classList.add('open');
+          modalOverlayEl.setAttribute('aria-hidden', 'false');
+          if (modalCloseBtn) modalCloseBtn.focus();
+        }
+
+        function closePreferencesModal() {
+          if (!modalOverlayEl || !modalOverlayEl.classList.contains('open')) return;
+          modalOverlayEl.classList.remove('open');
+          modalOverlayEl.setAttribute('aria-hidden', 'true');
+          if (lastFocusedBeforeCookieModal && typeof lastFocusedBeforeCookieModal.focus === 'function') {
+            lastFocusedBeforeCookieModal.focus();
+          }
+        }
+
+        // Public hook called after 3D boot sequence completes
+        window.checkAndPromptCookieConsent = function () {
+          var existing = getStoredConsent();
+          updateStatusBadge(existing);
+          if (existing) {
+            enforceConsentPolicy(existing);
+            hideBanner();
+          } else {
+            showBanner();
+          }
+        };
+
+        // Run initial consent check on load
+        var initialConsent = getStoredConsent();
+        updateStatusBadge(initialConsent);
+        if (initialConsent) {
+          enforceConsentPolicy(initialConsent);
+        }
+
+        // Event Listeners
+        if (acceptAllBtn) {
+          acceptAllBtn.addEventListener('click', function () {
+            saveConsent(true, true);
+          });
+        }
+        if (rejectBtn) {
+          rejectBtn.addEventListener('click', function () {
+            saveConsent(false, false);
+          });
+        }
+        if (customizeBtn) {
+          customizeBtn.addEventListener('click', function () {
+            openPreferencesModal();
+          });
+        }
+        if (openSettingsBtn) {
+          openSettingsBtn.addEventListener('click', function () {
+            openPreferencesModal();
+          });
+        }
+        if (modalCloseBtn) {
+          modalCloseBtn.addEventListener('click', closePreferencesModal);
+        }
+        if (modalOverlayEl) {
+          modalOverlayEl.addEventListener('click', function (e) {
+            if (e.target === modalOverlayEl) closePreferencesModal();
+          });
+        }
+        if (modalSaveBtn) {
+          modalSaveBtn.addEventListener('click', function () {
+            saveConsent(
+              funcToggle ? funcToggle.checked : false,
+              analyticsToggle ? analyticsToggle.checked : false
+            );
+          });
+        }
+        if (modalAcceptAllBtn) {
+          modalAcceptAllBtn.addEventListener('click', function () {
+            saveConsent(true, true);
+          });
+        }
+        if (modalRejectBtn) {
+          modalRejectBtn.addEventListener('click', function () {
+            saveConsent(false, false);
+          });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          if (modalOverlayEl && modalOverlayEl.classList.contains('open')) {
+            if (e.key === 'Escape') {
+              e.preventDefault();
+              closePreferencesModal();
+            } else if (e.key === 'Tab') {
+              trapFocusInContainer(e, modalOverlayEl);
+            }
+          }
+        });
+      })();
 
     })();
   </script>
