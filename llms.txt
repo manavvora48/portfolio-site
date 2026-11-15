@@ -1,0 +1,38 @@
+# Manav Vora — Creative Technologist & AI Designer Portfolio
+
+> Portfolio of Manav Vora: Creative Technologist, AI Designer, Data Analyst, and Aspiring Game Designer based in Mumbai, India.
+
+## Summary & Profile
+- **Name:** Manav Vora
+- **Location:** Mumbai, Maharashtra, India
+- **Focus Areas:** Creative Technology, AI-Generated Media, Brand Advertisement Design, Business Intelligence & Data Dashboards, Game Design, 3D Web Experiences (Three.js & WebGL).
+- **Contact Email:** manavvora48@gmail.com
+- **Instagram:** @manav__vora (https://instagram.com/manav__vora)
+- **GitHub:** https://github.com/manavvora48
+- **Primary Website:** https://manavvora.com/
+
+## Key Skills & Technologies
+- **AI & Emerging Tech:** AI Prompt Engineering, Studio Flacon & Macro Material Studies, AI Commercial Video Production, Midjourney / Stable Diffusion workflows.
+- **Design & Layout:** Brand Identity, Typography Hierarchy, Editorial Layout, Luxury Brand Advertising Systems, Canva, Figma.
+- **Data & Analytics:** Power BI Dashboarding, Data Modelling, DAX, Microsoft Excel Pivot Tables, Conditional Formatting, Trend Analytics.
+- **Creative Web & Gaming:** Three.js, WebGL 3D Canvas, Interactive Audio Systems, Game Design Systems, Mechanics & World Building ("Echoes of the Grid" Interactive Canvas Quest).
+
+## Featured Projects & Case Studies
+1. **VELORÉ: Luxury Beyond Glass**
+   - Brand identity and luxury packaging design system for a fictional Paris fragrance house.
+   - Includes custom bottle flacon studies, AI-generated macro photography, and campaign typography.
+2. **AUREVÉ: Sound. Elevated.**
+   - Product advertisement design and AI-generated commercial video for flagship audio hardware and laptops.
+3. **Power BI Business Intelligence Dashboard**
+   - Interactive KPI tracking, revenue growth analysis, and executive storytelling dashboard.
+4. **Excel Financial & Operations Model**
+   - Advanced data aggregation, pivot analysis, and formula-driven business projections.
+5. **Echoes of the Grid**
+   - In-browser interactive sci-fi purification mini-quest demonstrating real-time canvas mechanics and procedural feedback.
+
+## Documentation & Full Context
+- **Full In-Depth Portfolio Reference:** https://manavvora.com/llms-full.txt
+- **Privacy Policy:** https://manavvora.com/privacy-policy.html
+- **Terms & Conditions:** https://manavvora.com/terms-and-conditions.html
+- **Cookie Policy:** https://manavvora.com/cookie-policy.html
+- **Sitemap XML:** https://manavvora.com/sitemap.xml

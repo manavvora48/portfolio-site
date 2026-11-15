@@ -1,13 +1,34 @@
-# Google Search Console & Web Crawler Configuration
+# Search Engine Crawler Configuration
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
 
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# AI Crawlers & LLM Indexers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Default crawler rules
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /.*
 Allow: /.well-known/
 
-# Update https://your-domain.com with your live domain once deployed
-Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap location
+Sitemap: https://manavvora.com/sitemap.xml
