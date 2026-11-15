@@ -1,0 +1,13 @@
+# Environment files containing secret API keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+
